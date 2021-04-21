@@ -5,7 +5,7 @@
 ---
 template: template_header
 content: |
-  *** MISSING CONTENT ***
+  <div class="banner"></div>
 ---
 template: template_footer
 content: |
@@ -25,15 +25,22 @@ content: |
 ---
 template: template_disclaimer
 content: |
-  *** MISSING CONTENT ***
+  Welcome to the Royal Society for the Blinds NDIS Guidance Service (‘NDIS Guidance Service’). This application is designed to help you find and engage in services according to your needs within the National Disability Insurance Scheme.
+  <br><hr>
+  **Legal Advice Disclaimer**<br>
+  This application does not and should not be considered as official, legal advice. It is recommended that you seek your own, independent legal advice regarding the information given in this application.
+  <br><hr>
+  **Privacy Policy**<br>
+  The RSB is committed to protecting the privacy of personal information which the RSB collects, holds and administers.  The RSB will only collect information that is required for it to fulfil its contractual, ethical and legal responsibilities and provide quality and timely services. 
+
+  The RSB recognises the essential rights of individuals to have their information administered in ways which they would reasonably expect – protected on one hand and made accessible to them on the other.  These privacy values are reflected in RSB’s core values. 
+  
+  By continuing you accept these terms and also the terms specified in the Royal Society for the Blind [privacy policy](https://www.rsb.org.au/privacy-policy).
 ---
 template: template_disclaimer_under
 content: |
-  *** MISSING CONTENT ***
----
-template: template_privacy_policy
-content: |
-  *** MISSING CONTENT ***
+  <br>
+  Information regarding NDIS may not be up to date, you should seek further assistance before moving forward with a provided service.
 ---
 # ------------------------------------------------------
 #                   Endpoint Template's

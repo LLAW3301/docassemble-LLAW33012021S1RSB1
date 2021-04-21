@@ -5,7 +5,7 @@ metadata:
   title: |
     NDIS Guidance Service for Royal Society for the Blind
   short title: |
-    NDIS Guidance Service
+    NDIS Service Directory
   authors:
     - name: Jeremy Webster
     - name: Abigail Groocock
@@ -13,14 +13,15 @@ metadata:
     - name: Kolby Gibbs
     - name: Nick Pepaj
   organisation: Flinders University
-  revision_date: 2021-04-12
+  revision_date: 2021-04-21
   show login: False
   exit url: https://www.rsb.org.au/
   exit label: Leave
 ---
 include:
-  - templates.yml
+  - services.yml
   - code.yml
+  - templates.yml
 ---
 features:
   css: style.css
@@ -40,13 +41,11 @@ code: |
   set_parts(logo='<img src="' + image_logo.url_for() + '" style="height: 50px;">')
 ---
 default screen parts:
-  pre: |
-    ${ template_header }
   post: |
     ${ template_footer }
 ---
 mandatory: True
-question: NDIS Guidance Service for Royal Society for the Blind
+question: NDIS Service Directory
 subquestion: |
   ${ template_disclaimer }
 buttons:
@@ -56,8 +55,11 @@ buttons:
 under: |
   ${ template_disclaimer_under }
 ---
+include:
+  - questions.yml
+---
 event: endpoint['successful']
-question: Service found
+question: You are Eligible!
 subquestion: |
   ${ template_successful }
 buttons:
@@ -67,9 +69,35 @@ buttons:
 progress: 100
 ---
 event: endpoint['error']
-question: Other services wanted
+question: You are not Eligible
 subquestion: |
   ${ template_error }
+buttons:
+  - Exit: exit
+    url: https://www.rsb.org.au/
+  - Restart: restart
+progress: 100
+---
+event: endpoint['open_support']
+question: |
+  ${ support_opened }
+subquestion: |
+  ${ template_successful }
+  
+  ${ support_opened }
+buttons:
+  - Exit: exit
+    url: https://www.rsb.org.au/
+  - Restart: restart
+progress: 100
+---
+event: endpoint['open_service']
+question: |
+  ${ service_opened }
+subquestion: |
+  ${ template_successful }
+  
+  ${ service_opened }
 buttons:
   - Exit: exit
     url: https://www.rsb.org.au/
