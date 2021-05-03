@@ -105,7 +105,23 @@ content: |
 ---
 template: template_capacity
 content: |
-  *** MISSING CONTENT - CAPACITY BUILDING SUPPORT ***
+  
+  Capacity building supports are those that help you to maintain your independence and build your skills. 
+  
+  There are nine Capacity Building support categories. You won’t automatically receive funding for all nine, instead funding for these will be based on your NDIS plan goals.
+  
+  **In your plan:**  | **Description:**|**How you could use it:**
+  -------|---------|
+  **Support coordination**  | Fixed amount that funds a Support Coordinator to help you best utilise your NDIS plan. | Asking your support coordinator to find and book an appointment with an allied health professional.
+  **Improved Living Arrangements** | Support that help you and maintain a place to live. | Using breakthu's service to help search for rental properties online and meeting tenancy obligations. 
+  **Increased Social & Community Participation**   | Supports that provide training and skills to manage life independently and increase participation in your community. | Helping finding, organising or attend communitu programs or group activities to build relationship skills. 
+  **Finding & Keeping a Job**  | Services to help you with employment-related supports, including training and assessments. | Assistance with training and education, updating your resume, applying for jobs and preparing for job interviews. 
+  **Improved Relationships** | Helps develop positive behaviours, including social skill development. | Regular face to face meetings with your therapist as part of a behaviour management plan.
+  **Improved Health & Wellbeing** | Services that help you manage diet, exercise, nutrition and physical weelbeing. | Getting access to a nutritionist who can create individualised healthy meal plans. 
+  **Improved Learning** |Supports that help research and apply for study or training opportunities. | Direct support with day to day learning activities like study schedules, adequate accomodation, time management and more. 
+  **Improved Life Choices** | Services to help you with your plan managment, organisational and self-management skills. | Engaging with a service provider to get financial assistance and plan management services. 
+  **Improved Daily Living** | Covers some services, therapy and/or training by a professional that can help to increase your skills, independence and community participation. These services can also be held individually or in groups. | Using breakthru's Occupational Therapy, Psychology & Counselling services to support your goals. 
+  
 ---
 # ------------------------------------------------------
 #                   Endpoint Template's
