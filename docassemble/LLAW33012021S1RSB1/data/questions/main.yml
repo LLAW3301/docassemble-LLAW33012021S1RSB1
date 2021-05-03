@@ -82,9 +82,17 @@ event: endpoint['open_support']
 question: |
   ${ support_opened }
 subquestion: |
-  ${ template_successful }
+  % if support_opened == 'Core Support':
+    ${ template_core }
+  % endif
   
-  ${ support_opened }
+  % if support_opened == 'Capital Support':
+    ${ template_capital }
+  % endif
+  
+  % if support_opened == 'Capacity Building Support':
+    ${ template_capacity }
+  % endif
 buttons:
   - Exit: exit
     url: https://www.rsb.org.au/
@@ -106,7 +114,7 @@ progress: 100
 ---
 interview help:
   label: Help
-  heading: More information about this web site
+  heading: NDIS Basics
   content: |
     ${ template_help }
 ---

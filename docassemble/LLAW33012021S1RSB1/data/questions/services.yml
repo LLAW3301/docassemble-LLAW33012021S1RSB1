@@ -48,9 +48,14 @@ data:
 	  category: Assistance with Daily Life
 	  ndis_level: 0
 	  description: Once a week a cleaner will be sent to your house.
-	- service: Bus
+  - service: Bus
 	  support: Core Support
 	  category: Transport
     ndis_level: 0
+	  description: Once a week a cleaner will be sent to your house.
+  - service: Cook
+	  support: Core Support
+	  category: Assistance with Daily Life
+	  ndis_level: 0
 	  description: Once a week a cleaner will be sent to your house.
 ---

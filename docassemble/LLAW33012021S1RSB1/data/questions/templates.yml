@@ -1,6 +1,6 @@
 ---
 # ------------------------------------------------------
-#                   Core Template's
+#                   Layout Template's
 # ------------------------------------------------------
 ---
 template: template_header
@@ -34,13 +34,29 @@ content: |
   The RSB is committed to protecting the privacy of personal information which the RSB collects, holds and administers.  The RSB will only collect information that is required for it to fulfil its contractual, ethical and legal responsibilities and provide quality and timely services. 
 
   The RSB recognises the essential rights of individuals to have their information administered in ways which they would reasonably expect – protected on one hand and made accessible to them on the other.  These privacy values are reflected in RSB’s core values. 
-  
+
   By continuing you accept these terms and also the terms specified in the Royal Society for the Blind [privacy policy](https://www.rsb.org.au/privacy-policy).
 ---
 template: template_disclaimer_under
 content: |
   <br>
-  Information regarding NDIS may not be up to date, you should seek further assistance before moving forward with a provided service.
+  Information regarding NDIS is accurate as of *30th April 2021*, you should seek further assistance before moving forward with a provided service.
+---
+# ------------------------------------------------------
+#                   Support Template's
+# ------------------------------------------------------
+---
+template: template_core
+content: |
+  *** MISSING CONTENT - CORE SUPPORT ***
+---
+template: template_capital
+content: |
+  *** MISSING CONTENT - CAPITAL SUPPORT ***
+---
+template: template_capacity
+content: |
+  *** MISSING CONTENT - CAPACITY BUILDING SUPPORT ***
 ---
 # ------------------------------------------------------
 #                   Endpoint Template's
@@ -61,5 +77,14 @@ content: |
 ---
 template: template_help
 content: |
-  *** MISSING CONTENT ***
+  The National Disability Insurance Scheme (NDIS) is the Federal Government’s way of providing individualised support for people with a permanent disability. With the NDIS, you will have more choice and control over the support and services you receive and have far greater say in how you live your life.
+  
+  Support services that are funded by the NDIS aim to help you reach your goals, objectives and aspirations in a range of areas. These aim to help you to increase your independence, increase social and economic participation and develop your capacity to actively take part in the community. 
+    <br><hr>
+  # Who can help<br>
+  The RSB’s Independent Living Services provide people with vision loss with the necessary skills, equipment and strategies to live life as safely and as independently as possible. 
+  
+  The RSB has a team of trained Allied Health Professionals who can assess the needs of people with vision loss and make appropriate recommendations and teach them how to use a range of aids and techniques to assist them better manage everyday activities such as meal preparation, house cleaning, washing, ironing, personal grooming, gardening, and money management. 
+  <br>
+  *For further information about living with visual impairment and how the RSB’s range of Services can assist, call 1300 944 306 or email contact@rsb.org.au* 
 ---
