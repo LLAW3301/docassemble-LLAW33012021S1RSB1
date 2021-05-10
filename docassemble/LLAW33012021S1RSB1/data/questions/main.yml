@@ -1,6 +1,10 @@
 ---
 # Service developed for 'Royal Society for the Blind' by Flinders University Law and Computer Science Students.
 ---
+# ------------------------------------------------------
+#                     Structure
+# ------------------------------------------------------
+---
 metadata:
   title: |
     NDIS Guidance Service for Royal Society for the Blind
@@ -18,6 +22,12 @@ metadata:
   exit url: https://www.rsb.org.au/
   exit label: Leave
 ---
+objects:
+  - endpoint: DADict
+  - image_logo: DAStaticFile.using(filename='logo.png')
+  - found_service: DAObject
+  - found_support: DAObject
+---
 include:
   - services.yml
   - code.yml
@@ -32,18 +42,21 @@ features:
   hide standard menu: True
   small screen navigation: True # Show dropdown when in mobile
 ---
-objects:
-  - endpoint: DADict
-  - image_logo: DAStaticFile.using(filename='logo.png')
----
+# Displays company logo in top left of navigation bar
 mandatory: True
 code: |
   set_parts(logo='<img src="' + image_logo.url_for() + '" style="height: 50px;">')
 ---
+# Displays the footer content at bottom of screen
 default screen parts:
   post: |
     ${ template_footer }
 ---
+# ------------------------------------------------------
+#                     Flow
+# ------------------------------------------------------
+---
+# Displays the Welcome/Disclaimer page
 mandatory: True
 question: NDIS Service Directory
 subquestion: |
@@ -55,21 +68,65 @@ buttons:
 under: |
   ${ template_disclaimer_under }
 ---
+# Calls the 'Search' question, after they accept disclaimer
 include:
   - questions.yml
 ---
-event: endpoint['successful']
-question: You are Eligible!
+# ------------------------------------------------------
+#                   Endpoints
+# ------------------------------------------------------
+---
+# Shows the 'Support' section they selected
+# Uses simple statements to display the correct support template, and will
+# arrange the buttons at the bottom to navigation between support types
+event: endpoint['open_support']
+question: |
+  ${ support_opened }
 subquestion: |
-  ${ template_successful }
+  % if support_opened == 'Core Support':
+    ${ template_core }
+  % elif support_opened == 'Capital Support':
+    ${ template_capital }
+  % else:
+    ${ template_capacity }
+  % endif
+action buttons:
+  code: |
+    [
+      {'action': 'open_support',
+      'arguments': {'support': "Capital Support"},
+      'label': 'Capital Support',
+      'color': 'primary',
+      'icon': 'chevron-right' if support_opened == 'Core Support' else 'chevron-left'}
+    ] if support_opened != 'Capital Support' else [
+            {'action': 'open_support',
+      'arguments': {'support': "Core Support"},
+      'label': 'Core Support',
+      'color': 'primary',
+      'icon': 'chevron-left'},
+            {'action': 'open_support',
+      'arguments': {'support': "Capacity Building Support"},
+      'label': 'Capacity Building Support',
+      'color': 'primary',
+      'icon': 'chevron-right'},
+    ]
+progress: 80
+---
+# Shows the 'Searched' service they clicked
+event: endpoint['open_service']
+question: |
+  ${ service_opened }
+subquestion: |
+  ${ template_service }
 buttons:
   - Exit: exit
     url: https://www.rsb.org.au/
   - Restart: restart
 progress: 100
 ---
+# Opens the endpoint if they received an error
 event: endpoint['error']
-question: You are not Eligible
+question: Unable to find Service
 subquestion: |
   ${ template_error }
 buttons:
@@ -78,40 +135,11 @@ buttons:
   - Restart: restart
 progress: 100
 ---
-event: endpoint['open_support']
-question: |
-  ${ support_opened }
-subquestion: |
-  % if support_opened == 'Core Support':
-    ${ template_core }
-  % endif
-  
-  % if support_opened == 'Capital Support':
-    ${ template_capital }
-  % endif
-  
-  % if support_opened == 'Capacity Building Support':
-    ${ template_capacity }
-  % endif
-buttons:
-  - Exit: exit
-    url: https://www.rsb.org.au/
-  - Restart: restart
-progress: 100
+# ------------------------------------------------------
+#                     Help
+# ------------------------------------------------------
 ---
-event: endpoint['open_service']
-question: |
-  ${ service_opened }
-subquestion: |
-  ${ template_successful }
-  
-  ${ service_opened }
-buttons:
-  - Exit: exit
-    url: https://www.rsb.org.au/
-  - Restart: restart
-progress: 100
----
+# Opens the help page, when they press the button in nav bar
 interview help:
   label: Help
   heading: NDIS Basics

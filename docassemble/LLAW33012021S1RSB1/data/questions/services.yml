@@ -1,13 +1,11 @@
 ---
 # 
-# - service: NAME OF THE SERVICE
-#   support: TYPE OF SUPPOER (Core, Capitial, 
-#   category: CATEGORY NUMBER
-#           - Core
-#                - Category 1: Something
-#                - Category 2: Something
-#                - Category 3: Services
-#                - Category 4: Something
+#  List of all available funding support types
+#
+# - support: NAME OF THE SUPPORT
+#   categories: LIST OF SUPPORT CATEGORIES
+#   bio: SMALL SUMMARY OF SUPPORT
+#
 ---
 variable name: NDIS_supports
 user objects: true
@@ -40,6 +38,16 @@ data:
     bio: |
       Capacity Building Supports help build your independence and skills to help you reach your long-term goals.
 ---
+# 
+#  List of all available services
+#
+# - service: NAME OF THE SERVICE
+#   support: TYPE OF SUPPOER (Core, Capital, Capacity Building)
+#   category: NAME OF THE SUPPORT CATEGORY
+#   ndis_level: LEVEL OF NDIS TO BE ELIGBILE
+#   description: SUMMARY OF SERVICE
+#
+---
 variable name: NDIS_services
 use objects: true
 data:
@@ -52,10 +60,16 @@ data:
 	  support: Core Support
 	  category: Transport
     ndis_level: 0
-	  description: Once a week a cleaner will be sent to your house.
+	  description: Allows for purchase of transporation tickets with Adelaide Metro.
   - service: Cook
 	  support: Core Support
 	  category: Assistance with Daily Life
 	  ndis_level: 0
-	  description: Once a week a cleaner will be sent to your house.
+	  description: Once a week a cook will be sent to your house.
+  - service: Talking Clock
+    support: Capital Support
+    category: Assistive Technology
+    ndis_level: 0
+    description: |
+       The Talking Clock announces the current time every hour mimicking a human’s voice, also comes with a push button on the top which announces the time. It comes with available options for volume and frequency controls, allowing for the volume to be changed and how often it activates. 
 ---

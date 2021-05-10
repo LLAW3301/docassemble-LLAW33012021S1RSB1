@@ -3,10 +3,12 @@
 #                   Layout Template's
 # ------------------------------------------------------
 ---
+# Displays the banner on the search page, at the top
 template: template_header
 content: |
   <div class="banner"></div>
 ---
+# Displays the Flinders and RSB collaboration at the bottom
 template: template_footer
 content: |
     <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
@@ -23,6 +25,7 @@ content: |
 #                   Legal Template's
 # ------------------------------------------------------
 ---
+# Welcome page to the service
 template: template_disclaimer
 content: |
   Welcome to the Royal Society for the Blinds NDIS Guidance Service (‘NDIS Guidance Service’). This application is designed to help you find and engage in services according to your needs within the National Disability Insurance Scheme.
@@ -37,6 +40,7 @@ content: |
 
   By continuing you accept these terms and also the terms specified in the Royal Society for the Blind [privacy policy](https://www.rsb.org.au/privacy-policy).
 ---
+# Displays when the service was last updated
 template: template_disclaimer_under
 content: |
   <br>
@@ -46,6 +50,7 @@ content: |
 #                   Support Template's
 # ------------------------------------------------------
 ---
+# Displays the information about 'Core Support'
 template: template_core
 content: |
   Description | Example 
@@ -60,9 +65,10 @@ content: |
   This is support that helps you travel to work or other places that will help you achieve the goals in your plan. How you can spend your transport funding and how it is paid to you (whether upfront or in regular payments) will be different for each person. Your LAC will explain how you can use this budget.  Transport funding is split into the 3 levels depending on your circumstances.  Level 1 = up to $1606 Level 2 = up to $2472 Level 3 = up to $3456  Important facts about transport funding  *this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around | bus, taxi, car service, train and plane
   
 ---
+# Displays the information about 'Capital Support'
 template: template_capital
 content: |
-  Capital Supports are one of the three main funding categories, that often cover the most expensive or complicated items. There is little flexibility regarding the funding as all funds must be reasonable and necessary. This means they must be directly related to your disabiltiy and give you clear benefits.
+  Capital Supports are one of the three main funding categories, that often cover the most expensive or complicated items. There is little flexibility regarding the funding as all funds must be reasonable and necessary. This means they must be directly related to your disability and give you clear benefits.
   There are two sub categories under Capital Supports: Assistive Technology and Home Modifications.
  
   <hr>
@@ -80,7 +86,7 @@ content: |
   * Talking themometer
   * Pill organisers
   * Finger guards; liquid level finders; needle threaders
-  * Talking timers
+  * <a onclick="action_perform('open_service', {service: 'Talking Clock'})" href="#Talking Clock">Talking clock</a>
   * Tactile markers and dots
   * Vision Impaired person badges
   * Large button landline phones
@@ -103,7 +109,7 @@ content: |
   
   <hr>
   ### Home Modifications
-  Home Modfications cover the costs involved in making structural changes to your current home and adding specialised fittings and fixtures designed to help you live as safely, independently and comfortably as possible.
+  Home Modifications cover the costs involved in making structural changes to your current home and adding specialised fittings and fixtures designed to help you live as safely, independently and comfortably as possible.
   
   Examples might include: 
   
@@ -116,6 +122,7 @@ content: |
   
   <hr>
 ---
+# Displays the information about 'Capacity Building Support'
 template: template_capacity
 content: |
   Capacity building supports are those that help you to maintain your independence and build your skills. 
@@ -136,32 +143,28 @@ content: |
 
   <hr>
 ---
+# Displays information about the service they selected
 template: template_service
 content: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae leo ullamcorper, venenatis arcu nec, rhoncus nisi. Fusce sit amet pharetra urna. Nam feugiat, elit ac laoreet congue, justo justo elementum metus, placerat sodales risus tortor eu nulla. Phasellus suscipit nibh libero, in auctor mauris luctus sit amet. Ut consequat dignissim mauris, vitae interdum sem efficitur sed.
-  
-  ${ service['service'] }
-  
-  ## Support
-  This task is funded under ${ service['support'] }, read more here:
-  <a onclick="action_perform('open_support', {support: '${ service['support'] }'})">See ${ service['support'] }</a>
-  
+  ${ found_service['description'] }
+  <br><hr>
+  ### Support
+  This service is funded by **${ found_service['support'] }** under **${ found_service['category'] }**, read more here:
+  <a onclick="action_perform('open_support', {support: '${ found_service['support'] }'})" href="#${ service['support'] }">Go to ${ service['support'] }</a>
+  <br><br>
   <div class="card support_card">
     <div class="card-body">
       <h5 class="card-title">Eligibility</h5>
-      <p>Does your disability stop you from doing this task?</p>
-      <button type="button" onclick="action_perform('open_support', {support: '${ service['support'] }'})">Read More</button>
+      <p>Currently we are unable to check your eligibility for this service.</p>
     </div>
   </div>
+  <hr>
 ---
 # ------------------------------------------------------
 #                   Endpoint Template's
 # ------------------------------------------------------
 ---
-template: template_successful
-content: |
-  *** MISSING CONTENT ***
----
+# Displays if an error was encountered when using the service
 template: template_error
 content: |
   You have indicated that you require other services not listed in this application.
@@ -171,6 +174,7 @@ content: |
   **Website:** www.rsb.org.au<br>
   **Email:** contact@rsb.org.au
 ---
+# Displays the information about the service and how to get further assistance
 template: template_help
 content: |
   The National Disability Insurance Scheme (NDIS) is the Federal Government’s way of providing individualised support for people with a permanent disability. With the NDIS, you will have more choice and control over the support and services you receive and have far greater say in how you live your life.
