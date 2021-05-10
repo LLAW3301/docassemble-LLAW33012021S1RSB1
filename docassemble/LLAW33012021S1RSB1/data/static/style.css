@@ -9,11 +9,22 @@
 h1 { 
   font-family: Cabin, arial, sans-serif;
   color: rgb(68,48,148);
-  font-size: 26px;
+  font-size: 1.625em; /* 26px */
   font-style: normal;
   font-variant: normal;
-  font-weight: 700; line-height: 26.4px;
+  font-weight: 700;
+  line-height: 26.4px;
   text-align: center;
+}
+
+h3 {
+  font-family: Cabin, arial, sans-serif;
+  color: rgb(68,48,148);
+  font-size: 1.125em; /* 18px */
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
 }
 
 .navbar{
@@ -32,17 +43,20 @@ h1 {
     text-align: center;
 }
 
+.navbar .nav-item a:hover, .navbar .nav-item a:active {
+   background-color: #f2f2f2;
+}
+
 /**
   Search Page
 **/
 
 .banner {
-    width: 100vw;
+    width: 99.5vw;
     height: 400px;
     margin-left: calc(50% - 50vw);
     overflow-x: hidden;
     background-position: center;
-    background-repeat: no-repeat;
   
     background-image: url('https://docassemble.flinders.edu.au/playgroundstatic/RSB/278/banner.jpg');
 
@@ -51,34 +65,55 @@ h1 {
     margin-bottom: 0;
 }
 
+.search-center {
+	width: clamp(50px, 60%, 600px);
+  margin-left: calc(50% - (clamp(50px, 60%, 600px) / 2));
+  margin-top: 100px;
+  padding-top: 10px;
+  overflow-x: hidden;
+}
+
+.search-center h1 {
+	text-align: center;
+  font-size: clamp(2em, 5vw, 3.25em); /* 60px */
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 40px;
+}
+
 #search-bar {
-  width: 600px;
+  width: 100%;
   box-sizing: border-box;
   background-image: url('https://docassemble.flinders.edu.au/playgroundstatic/RSB/278/searchicon.png');
   background-position: 14px 12px;
   background-repeat: no-repeat;
-  font-size: 16px;
+  font-size: 1em; /* 16px */
   padding: 14px 20px 12px 45px;
   border: 3px solid #ddd;
   border-radius: 30px;
 }
 
-#search-bar:focus, #search-content:hover + #search-bar, #search-content a:hover + #search-bar {
+#search-bar:focus, 
+#search-content:hover + #search-bar, #search-content a:hover + #search-bar,
+#search-content:active + #search-bar, #search-content a:active + #search-bar
+{
   border-radius: 2px 2px 0 0;
   outline: none;
 }
 
-#search-bar:focus + #search-content, #search-content:hover, #search-content a:hover + #search-content {
+#search-bar:focus + #search-content, 
+#search-content:hover, #search-content a:hover + #search-content,
+#search-content:active, #search-content a:active + #search-content
+{
 	visibility: visible;
 }
 
 /* With the max height and Overflow hidden, it limits the links shown */
 #search-content {
-  width: 600px;
+  width: clamp(50px, 60vw, 600px);
   visibility: hidden;
   position: absolute;
   background-color: #f6f6f6;
-  min-width: 230px;
   overflow: hidden;
   border: 1px solid #ddd;
   z-index: 1;
@@ -97,20 +132,6 @@ h1 {
   background-color: #ddd;
 }
 
-.search-center {
-	width: 600px;
-  margin-left: calc(50% - 300px);
-  margin-top: 100px;
-}
-
-.search-center h1 {
-	text-align: center;
-  font-size: 60px;
-  font-weight: 700;
-  color: #FFF;
-  margin-bottom: 40px;
-}
-
 /**
   Support Card in Search Page
 **/
@@ -119,15 +140,57 @@ h1 {
  margin-bottom: 15px; 
 }
 
-.support_card button {
+.card-btn {
   margin-left: calc(50% - 90px);
+  display: block;
   width: 180px;
   height: 45px;
   margin-top: 10px;
   font-family: Cabin, arial, sans-serif;
-  font-size: 16px;
+  font-size: 1em; /* 16px */
   font-weight: 400;
   border: 2px solid #572C83 !important;
   border-radius: 4px !important;
   color: #000 !important;
+  text-decoration: none !important;
+  text-align: center;
+  line-height: 40px;
+}
+
+.card-btn:hover, .card-btn:active {
+   background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    width: 100vw;
+    height: 300px;
+    margin-left: calc(50% - 50vw);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .banner {
+    height: 150px;
+  }
+  
+ .search-center h1 {
+    font-size: clamp(1em, 5vw, 3.75em) !important; /* 60px */
+    margin-bottom: 20px;
+  }
+  
+  .search-center {
+    margin-top: 30px;
+  }
+  
+  #search-bar {
+    height: 20px;
+    background-position: 14px 6px;
+    background-size: 14px;
+  }
+  
+  #search-content a {
+    padding: 6px 8px;
+    font-size: 1em;
+  }
 }

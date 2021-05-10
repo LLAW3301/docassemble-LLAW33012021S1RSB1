@@ -27,10 +27,10 @@ template: template_disclaimer
 content: |
   Welcome to the Royal Society for the Blinds NDIS Guidance Service (‘NDIS Guidance Service’). This application is designed to help you find and engage in services according to your needs within the National Disability Insurance Scheme.
   <br><hr>
-  **Legal Advice Disclaimer**<br>
+  ### Legal Advice Disclaimer
   This application does not and should not be considered as official, legal advice. It is recommended that you seek your own, independent legal advice regarding the information given in this application.
   <br><hr>
-  **Privacy Policy**<br>
+  ### Privacy Policy
   The RSB is committed to protecting the privacy of personal information which the RSB collects, holds and administers.  The RSB will only collect information that is required for it to fulfil its contractual, ethical and legal responsibilities and provide quality and timely services. 
 
   The RSB recognises the essential rights of individuals to have their information administered in ways which they would reasonably expect – protected on one hand and made accessible to them on the other.  These privacy values are reflected in RSB’s core values. 
@@ -64,8 +64,9 @@ template: template_capital
 content: |
   Capital Supports are one of the three main funding categories, that often cover the most expensive or complicated items. There is little flexibility regarding the funding as all funds must be reasonable and necessary. This means they must be directly related to your disabiltiy and give you clear benefits.
   There are two sub categories under Capital Supports: Assistive Technology and Home Modifications.
-  
-  **Assistive Technology**
+ 
+  <hr>
+  ### Assistive Technology
   Assistive Technology includes aids or equipment that help you live independently or helps your carer to look after you. It may include mobility aids and communication devices. The cost for assessments, set-up and training to use these assistive technologies are also covered in this funding category.
   
   **Level One Items (under $1500)**
@@ -100,7 +101,8 @@ content: |
   * Text to speech devices
   * Braille note-takers
   
-  **Home Modifications**
+  <hr>
+  ### Home Modifications
   Home Modfications cover the costs involved in making structural changes to your current home and adding specialised fittings and fixtures designed to help you live as safely, independently and comfortably as possible.
   
   Examples might include: 
@@ -111,11 +113,11 @@ content: |
   * Trialling magnifying mirrors for makeup application
   * Increasing lighting
   * Grab rails, banister rails, ramps, larger steps, magnetic door catches and lighting.
-
+  
+  <hr>
 ---
 template: template_capacity
 content: |
-  
   Capacity building supports are those that help you to maintain your independence and build your skills. 
   
   There are nine Capacity Building support categories. You won’t automatically receive funding for all nine, instead funding for these will be based on your NDIS plan goals.
@@ -131,7 +133,26 @@ content: |
   **Improved Learning** |Supports that help research and apply for study or training opportunities. | Direct support with day to day learning activities like study schedules, adequate accomodation, time management and more. 
   **Improved Life Choices** | Services to help you with your plan managment, organisational and self-management skills. | Engaging with a service provider to get financial assistance and plan management services. 
   **Improved Daily Living** | Covers some services, therapy and/or training by a professional that can help to increase your skills, independence and community participation. These services can also be held individually or in groups. | Using breakthru's Occupational Therapy, Psychology & Counselling services to support your goals. 
+
+  <hr>
+---
+template: template_service
+content: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae leo ullamcorper, venenatis arcu nec, rhoncus nisi. Fusce sit amet pharetra urna. Nam feugiat, elit ac laoreet congue, justo justo elementum metus, placerat sodales risus tortor eu nulla. Phasellus suscipit nibh libero, in auctor mauris luctus sit amet. Ut consequat dignissim mauris, vitae interdum sem efficitur sed.
   
+  ${ service['service'] }
+  
+  ## Support
+  This task is funded under ${ service['support'] }, read more here:
+  <a onclick="action_perform('open_support', {support: '${ service['support'] }'})">See ${ service['support'] }</a>
+  
+  <div class="card support_card">
+    <div class="card-body">
+      <h5 class="card-title">Eligibility</h5>
+      <p>Does your disability stop you from doing this task?</p>
+      <button type="button" onclick="action_perform('open_support', {support: '${ service['support'] }'})">Read More</button>
+    </div>
+  </div>
 ---
 # ------------------------------------------------------
 #                   Endpoint Template's
@@ -155,11 +176,12 @@ content: |
   The National Disability Insurance Scheme (NDIS) is the Federal Government’s way of providing individualised support for people with a permanent disability. With the NDIS, you will have more choice and control over the support and services you receive and have far greater say in how you live your life.
   
   Support services that are funded by the NDIS aim to help you reach your goals, objectives and aspirations in a range of areas. These aim to help you to increase your independence, increase social and economic participation and develop your capacity to actively take part in the community. 
-    <br><hr>
-  # Who can help<br>
+
+    <hr>
+  ### Who can help
   The RSB’s Independent Living Services provide people with vision loss with the necessary skills, equipment and strategies to live life as safely and as independently as possible. 
   
   The RSB has a team of trained Allied Health Professionals who can assess the needs of people with vision loss and make appropriate recommendations and teach them how to use a range of aids and techniques to assist them better manage everyday activities such as meal preparation, house cleaning, washing, ironing, personal grooming, gardening, and money management. 
-  <br>
-  *For further information about living with visual impairment and how the RSB’s range of Services can assist, call 1300 944 306 or email contact@rsb.org.au* 
+  
+  *For further information about living with visual impairment and how the RSB’s range of Services can assist, call [1300 944 306](tel:1300 944 306) or email [contact@rsb.org.au](mailto:contact@rsb.org.au)*
 ---

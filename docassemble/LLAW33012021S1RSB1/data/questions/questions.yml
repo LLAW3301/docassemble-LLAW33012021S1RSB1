@@ -11,7 +11,7 @@ subquestion: |
     <div class="card-body">
       <h5 class="card-title">${ support['support'] }</h5>
       <p>${ support['bio'] }</p>
-      <button type="button" onclick="action_perform('open_support', {support: '${ support['support'] }'})">Read More</button>
+      <a class="card-btn" tabindex="10" href='#${ support['support'] }' onclick="action_perform('open_support', {support: '${ support['support'] }'})">Read More</a>
     </div>
   </div>
   %endfor  
@@ -24,7 +24,7 @@ pre: |
       
           <div id="search-content">
             %for service in NDIS_services:
-            <a onclick="action_perform('open_service', {service: '${ service['service'] }'})">${ service['service'] }</a>
+            <a tabindex="1" onclick="action_perform('open_service', {service: '${ service['service'] }'})">${ service['service'] }</a>
             %endfor
           </div>
         </div>
