@@ -6,6 +6,7 @@
 # Shows a top banner section that has a search input field, where the user can type in the term they want to search.
 # The JavaScript automatically populates the search dropdown with all available services based on their current input
 mandatory: True
+event: open_search
 question: |
   What support is available?
 pre: |

@@ -25,6 +25,7 @@ metadata:
 objects:
   - endpoint: DADict
   - image_logo: DAStaticFile.using(filename='logo.png')
+  - excel_data: DAStaticFile.using(filename='ndis_services.xlsx')
   - found_service: DAObject
   - found_support: DAObject
 ---
@@ -97,18 +98,26 @@ action buttons:
       'arguments': {'support': "Capital Support"},
       'label': 'Capital Support',
       'color': 'primary',
-      'icon': 'chevron-right' if support_opened == 'Core Support' else 'chevron-left'}
+      'icon': 'chevron-right' if support_opened == 'Core Support' else 'chevron-left'},
+      {'action': 'open_search',
+      'label': 'Home',
+      'color': 'warning',
+      'icon': 'sign-out-alt'}
     ] if support_opened != 'Capital Support' else [
             {'action': 'open_support',
       'arguments': {'support': "Core Support"},
       'label': 'Core Support',
       'color': 'primary',
       'icon': 'chevron-left'},
-            {'action': 'open_support',
+        {'action': 'open_support',
       'arguments': {'support': "Capacity Building Support"},
       'label': 'Capacity Building Support',
       'color': 'primary',
       'icon': 'chevron-right'},
+        {'action': 'open_search',
+      'label': 'Home',
+      'color': 'warning',
+      'icon': 'sign-out-alt'}
     ]
 progress: 80
 ---
@@ -143,6 +152,8 @@ progress: 100
 interview help:
   label: Help
   heading: NDIS Basics
+  buttons:
+    - "I do not accept": exit
   content: |
     ${ template_help }
 ---

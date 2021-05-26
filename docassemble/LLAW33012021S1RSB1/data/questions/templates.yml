@@ -188,4 +188,7 @@ content: |
   The RSB has a team of trained Allied Health Professionals who can assess the needs of people with vision loss and make appropriate recommendations and teach them how to use a range of aids and techniques to assist them better manage everyday activities such as meal preparation, house cleaning, washing, ironing, personal grooming, gardening, and money management. 
   
   *For further information about living with visual impairment and how the RSB’s range of Services can assist, call [1300 944 306](tel:1300 944 306) or email [contact@rsb.org.au](mailto:contact@rsb.org.au)*
+  
+  <hr>
+  <a tabindex="1" onclick="action_perform('open_search')" class="btn btn-warning btn-da">Back</a>
 ---
