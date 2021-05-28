@@ -53,16 +53,58 @@ content: |
 # Displays the information about 'Core Support'
 template: template_core
 content: |
-  Description | Example 
-  -------|-------
-  Assistance with Daily Life 
-  Support for any activity you need assistance or help with. | Cleaner, Gardener, Grocery Shopping delivery, etc
-  Consumables
-  Consumables are a support category available to assist participants with purchasing everyday use items. Not all supports in this category are consumable, but continence, home enteral nutrition (HEN) and disability-related health products are included in this category.  | Any product that would be used daily. For example: soap, shampoo,  food, cleaning products, low cost assistive technology, etc
-  Assistance with Daily Social and Community Participation
-  This support is to help create community and friendship in your life. Social events, activities or outings you need support with may be able to be funded here.  | social worker, support worker, transport (though this is a separate category as well), excursion costs, membership fees, etc
-  Transport
-  This is support that helps you travel to work or other places that will help you achieve the goals in your plan. How you can spend your transport funding and how it is paid to you (whether upfront or in regular payments) will be different for each person. Your LAC will explain how you can use this budget.  Transport funding is split into the 3 levels depending on your circumstances.  Level 1 = up to $1606 Level 2 = up to $2472 Level 3 = up to $3456  Important facts about transport funding  *this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around | bus, taxi, car service, train and plane
+  
+  Core Supports help you with everyday activities, your current disability-related needs and to work towards your goals.
+  
+  ### Assistance with Daily Life 
+  Support for any activity you need assistance or help with.These u=include but are not limited to:
+  
+  * Cleaner
+  * Gardener
+  * Grocery Shopping delivery
+  * etc
+  
+  
+  ### Consumables
+  Consumables are a support category available to assist participants with purchasing everyday use items. Not all supports in this category are consumable, but continence, home enteral nutrition (HEN) and disability-related health products are included in this category. Any product that would be used daily. For example: 
+  
+  * soap
+  * shampoo
+  * food
+  * cleaning products
+  * low cost assistive technology
+  * etc
+  
+  
+  ### Assistance with Daily Social and Community Participation
+  This support is to help create community and friendship in your life. Social events, activities or outings you need support with may be able to be funded here.
+  
+  * social worker
+  * support worker
+  * transport (though this is a separate category as well)
+  * excursion costs
+  * membership fees
+  * etc
+  
+  
+  ### Transport
+  This is support that helps you travel to work or other places that will help you achieve the goals in your plan. How you can spend your transport funding and how it is paid to you (whether upfront or in regular payments) will be different for each person. Your LAC will explain how you can use this budget.  
+  
+  Transport funding is split into the 3 levels depending on your circumstances.  
+  
+  **Level 1** = up to $1606 
+  
+  **Level 2** = up to $2472 
+  
+  **Level 3** = up to $3456  
+  
+  An important fact about transport funding this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around. 
+  It may include:
+  
+  * bus
+  * taxi
+  * car service
+  * train and plane
   
 ---
 # Displays the information about 'Capital Support'

@@ -23,7 +23,7 @@ pre: |
         </div>
       </div>
 subquestion: |
-  The [National Disability Insurance Scheme](https://www.ndis.gov.au) (NDIS) has multiple funding options available for participants on the scheme. Funding varies across the three major categories these include Core Support, Capital Support and Capacity Building Support. Further information is available blow:
+  The [National Disability Insurance Scheme](https://www.ndis.gov.au) (NDIS) has multiple funding options available for participants on the scheme. Funding varies across the three major categories these include Core Support, Capital Support and Capacity Building Support. Further information is available below:
   
   <br>
   %for support in NDIS_supports:
