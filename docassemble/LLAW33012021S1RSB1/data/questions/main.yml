@@ -17,15 +17,23 @@ metadata:
     - name: Kolby Gibbs
     - name: Nick Pepaj
   organisation: Flinders University
-  revision_date: 2021-04-21
+  revision_date: 2021-05-31
   show login: False
   exit url: https://www.rsb.org.au/
   exit label: Leave
 ---
+features:
+  debug: False
+  css: style.css
+  progress bar: False
+  show progress bar percentage: False
+  navigation back button: True
+  hide standard menu: True
+  small screen navigation: True # Show dropdown when in mobile
+---
 objects:
   - endpoint: DADict
   - image_logo: DAStaticFile.using(filename='logo.png')
-  - excel_data: DAStaticFile.using(filename='ndis_services.xlsx')
   - found_service: DAObject
   - found_support: DAObject
 ---
@@ -33,15 +41,6 @@ include:
   - services.yml
   - code.yml
   - templates.yml
----
-features:
-  css: style.css
-  progress bar: False
-  show progress bar percentage: False
-  debug: True
-  navigation back button: True
-  hide standard menu: True
-  small screen navigation: True # Show dropdown when in mobile
 ---
 # Displays company logo in top left of navigation bar
 mandatory: True
@@ -102,7 +101,10 @@ action buttons:
       {'action': 'open_search',
       'label': 'Home',
       'color': 'warning',
-      'icon': 'sign-out-alt'}
+      'icon': 'sign-out-alt'},
+      {'action': 'https://www.rsb.org.au/',
+      'label': 'Exit',
+      'color': 'danger'}
     ] if support_opened != 'Capital Support' else [
             {'action': 'open_support',
       'arguments': {'support': "Core Support"},
@@ -114,10 +116,9 @@ action buttons:
       'label': 'Capacity Building Support',
       'color': 'primary',
       'icon': 'chevron-right'},
-        {'action': 'open_search',
-      'label': 'Home',
-      'color': 'warning',
-      'icon': 'sign-out-alt'}
+        {'action': 'https://www.rsb.org.au/',
+      'label': 'Exit',
+      'color': 'danger'}
     ]
 progress: 80
 ---
@@ -127,10 +128,20 @@ question: |
   ${ service_opened }
 subquestion: |
   ${ template_service }
-buttons:
-  - Exit: exit
-    url: https://www.rsb.org.au/
-  - Restart: restart
+action buttons:
+  code: |
+    [{'action': 'open_support',
+    'arguments': {'support': found_service['support']},
+    'label': 'Go to '+ found_service['support'],
+    'color': 'primary',
+    'icon': 'chevron-left'},
+    {'action': 'open_search',
+    'label': 'Home',
+    'color': 'warning',
+    'icon': 'sign-out-alt'},
+    {'action': 'https://www.rsb.org.au/',
+    'label': 'Exit',
+    'color': 'danger'}]
 progress: 100
 ---
 # Opens the endpoint if they received an error
@@ -138,10 +149,14 @@ event: endpoint['error']
 question: Unable to find Service
 subquestion: |
   ${ template_error }
-buttons:
-  - Exit: exit
-    url: https://www.rsb.org.au/
-  - Restart: restart
+action buttons:
+  - label: Home
+    action: open_search
+    color: warning
+    icon: sign-out-alt
+  - label: Exit
+    action: https://www.rsb.org.au/
+    color: danger
 progress: 100
 ---
 # ------------------------------------------------------

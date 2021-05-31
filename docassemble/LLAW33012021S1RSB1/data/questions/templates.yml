@@ -36,8 +36,6 @@ content: |
   ### Privacy Policy
   The RSB is committed to protecting the privacy of personal information which the RSB collects, holds and administers.  The RSB will only collect information that is required for it to fulfil its contractual, ethical and legal responsibilities and provide quality and timely services. 
 
-  The RSB recognises the essential rights of individuals to have their information administered in ways which they would reasonably expect – protected on one hand and made accessible to them on the other.  These privacy values are reflected in RSB’s core values. 
-
   By continuing you accept these terms and also the terms specified in the Royal Society for the Blind [privacy policy](https://www.rsb.org.au/privacy-policy).
 ---
 # Displays when the service was last updated
@@ -56,56 +54,60 @@ content: |
   
   Core Supports help you with everyday activities, your current disability-related needs and to work towards your goals.
   
-  ### Assistance with Daily Life 
-  Support for any activity you need assistance or help with.These u=include but are not limited to:
+  <hr>
+  ### <span class="header-num">1</span> Assistance with Daily Life
+  Support for any activity you need assistance or help with.These include but are not limited to:
+
+  % for item in NDIS_services:
+  % if item['category'] == 'Assistance with Daily Life':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor 
   
-  * Cleaner
-  * Gardener
-  * Grocery Shopping delivery
-  * etc
-  
-  
-  ### Consumables
-  Consumables are a support category available to assist participants with purchasing everyday use items. Not all supports in this category are consumable, but continence, home enteral nutrition (HEN) and disability-related health products are included in this category. Any product that would be used daily. For example: 
-  
-  * soap
-  * shampoo
-  * food
-  * cleaning products
-  * low cost assistive technology
-  * etc
-  
-  
-  ### Assistance with Daily Social and Community Participation
-  This support is to help create community and friendship in your life. Social events, activities or outings you need support with may be able to be funded here.
-  
-  * social worker
-  * support worker
-  * transport (though this is a separate category as well)
-  * excursion costs
-  * membership fees
-  * etc
-  
-  
-  ### Transport
+  <hr>
+  ### <span class="header-num">2</span> Transport Allowance
   This is support that helps you travel to work or other places that will help you achieve the goals in your plan. How you can spend your transport funding and how it is paid to you (whether upfront or in regular payments) will be different for each person. Your LAC will explain how you can use this budget.  
   
   Transport funding is split into the 3 levels depending on your circumstances.  
   
-  **Level 1** = up to $1606 
-  
-  **Level 2** = up to $2472 
-  
-  **Level 3** = up to $3456  
+  * **Level 1** = up to $1606 
+  * **Level 2** = up to $2472 
+  * **Level 3** = up to $3456  
   
   An important fact about transport funding this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around. 
   It may include:
   
-  * bus
-  * taxi
-  * car service
-  * train and plane
+  % for item in NDIS_services:
+  % if item['category'] == 'Transport':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor 
+
+  <hr>
+  ### <span class="header-num">3</span> Consumables
+  Consumables are a support category available to assist participants with purchasing everyday use items. Not all supports in this category are consumable, but continence, Home Enteral Nutrition (HEN) and disability-related health products are included in this category. Any product that would be used daily. For example: 
   
+  % for item in NDIS_services:
+  % if item['category'] == 'Consumables':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+  * Low Cost Assistive Technology
+  
+  <hr>
+  ### <span class="header-num">4</span> Assistance with Daily Social and Community Participation
+  This support is to help create community and friendship in your life. Social events, activities or outings you need support with may be able to be funded here.
+  
+  % for item in NDIS_services:
+  % if item['category'] == 'Assistance with Daily Social and Community Participation':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+  * Transport (though this is a separate category as well)
+  * Excursion Costs
+  * Membership Fees
+  
+  <hr>
 ---
 # Displays the information about 'Capital Support'
 template: template_capital
@@ -114,21 +116,18 @@ content: |
   There are two sub categories under Capital Supports: Assistive Technology and Home Modifications.
  
   <hr>
-  ### Assistive Technology
+  ### <span class="header-num">5</span> Assistive Technology
   Assistive Technology includes aids or equipment that help you live independently or helps your carer to look after you. It may include mobility aids and communication devices. The cost for assessments, set-up and training to use these assistive technologies are also covered in this funding category.
   
   **Level One Items (under $1500)**
   Examples might include:
   
-  * White canes and replacement tips and ball
-  * Optic Magnifiers; magnifying mirrors; magnifying lamps; and lights
-  * Talking and large faced watches and clocks
-  * Talking bathroom and kitchen scales
-  * Talking blood pressure monitor
-  * Talking themometer
-  * Pill organisers
+  % for item in NDIS_services:
+  % if item['category'] == 'Assistive Technology':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   * Finger guards; liquid level finders; needle threaders
-  * <a onclick="action_perform('open_service', {service: 'Talking Clock'})" href="#Talking Clock">Talking clock</a>
   * Tactile markers and dots
   * Vision Impaired person badges
   * Large button landline phones
@@ -150,11 +149,16 @@ content: |
   * Braille note-takers
   
   <hr>
-  ### Home Modifications
+  ### <span class="header-num">6</span> Home Modifications
   Home Modifications cover the costs involved in making structural changes to your current home and adding specialised fittings and fixtures designed to help you live as safely, independently and comfortably as possible.
   
   Examples might include: 
   
+  % for item in NDIS_services:
+  % if item['category'] == 'Home Modifications':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   * Handrails in shower
   * Marking personal items to assist with easier identification
   * Reorganising wardrobe using tactile markings on clothing or coat hangers
@@ -171,17 +175,59 @@ content: |
   
   There are nine Capacity Building support categories. You won’t automatically receive funding for all nine, instead funding for these will be based on your NDIS plan goals.
   
-  **In your plan:**  | **Description:**|**How you could use it:**
-  -------|---------|
-  **Support coordination**  | Fixed amount that funds a Support Coordinator to help you best utilise your NDIS plan. | Asking your support coordinator to find and book an appointment with an allied health professional.
-  **Improved Living Arrangements** | Support that help you and maintain a place to live. | Using breakthu's service to help search for rental properties online and meeting tenancy obligations. 
-  **Increased Social & Community Participation**   | Supports that provide training and skills to manage life independently and increase participation in your community. | Helping finding, organising or attend communitu programs or group activities to build relationship skills. 
-  **Finding & Keeping a Job**  | Services to help you with employment-related supports, including training and assessments. | Assistance with training and education, updating your resume, applying for jobs and preparing for job interviews. 
-  **Improved Relationships** | Helps develop positive behaviours, including social skill development. | Regular face to face meetings with your therapist as part of a behaviour management plan.
-  **Improved Health & Wellbeing** | Services that help you manage diet, exercise, nutrition and physical weelbeing. | Getting access to a nutritionist who can create individualised healthy meal plans. 
-  **Improved Learning** |Supports that help research and apply for study or training opportunities. | Direct support with day to day learning activities like study schedules, adequate accomodation, time management and more. 
-  **Improved Life Choices** | Services to help you with your plan managment, organisational and self-management skills. | Engaging with a service provider to get financial assistance and plan management services. 
-  **Improved Daily Living** | Covers some services, therapy and/or training by a professional that can help to increase your skills, independence and community participation. These services can also be held individually or in groups. | Using breakthru's Occupational Therapy, Psychology & Counselling services to support your goals. 
+  <hr>
+  ### <span class="header-num">7</span> Support Coordination
+  Fixed amount that funds a Support Coordinator to help you best utilise your NDIS plan
+  
+  * Asking your support coordinator to find and book an appointment with an allied health professional.
+
+  <hr>
+  ### <span class="header-num">8</span> Improved Living Arrangements
+  Support that help you and maintain a place to live.
+  
+  * Using breakthu's service to help search for rental properties online and meeting tenancy obligations. 
+  
+  <hr>
+  ### <span class="header-num">9</span> Increased Social & Community Participation
+  Supports that provide training and skills to manage life independently and increase participation in your community.
+  
+  * Helping finding, organising or attend communitu programs or group activities to build relationship skills. 
+  
+  <hr>
+  ### <span class="header-num-large">10</span> Finding & Keeping a Job
+  Services to help you with employment-related supports, including training and assessments. 
+  
+  * Assistance with training and education, updating your resume, applying for jobs and preparing for job interviews. 
+  
+  <hr>
+  ### <span class="header-num-large">11</span> Improved Relationships
+  Helps develop positive behaviours, including social skill development.
+  
+  * Regular face to face meetings with your therapist as part of a behaviour management plan.
+  
+  <hr>
+  ### <span class="header-num-large">12</span> Improved Health & Wellbeing
+  Services that help you manage diet, exercise, nutrition and physical weelbeing. 
+  
+  * Getting access to a nutritionist who can create individualised healthy meal plans. 
+  
+  <hr>
+  ### <span class="header-num-large">13</span> Improved Learning
+  Supports that help research and apply for study or training opportunities. 
+  
+  * Direct support with day to day learning activities like study schedules, adequate accomodation, time management and more. 
+  
+  <hr>
+  ### <span class="header-num-large">14</span> Improved Life Choices
+  Services to help you with your plan managment, organisational and self-management skills. 
+  
+  * Engaging with a service provider to get financial assistance and plan management services. 
+  
+  <hr>
+  ### <span class="header-num-large">15</span> Improved Daily Living
+  Covers some services, therapy and/or training by a professional that can help to increase your skills, independence and community participation. These services can also be held individually or in groups. 
+  
+  * Using breakthru's Occupational Therapy, Psychology & Counselling services to support your goals. 
 
   <hr>
 ---
@@ -189,17 +235,12 @@ content: |
 template: template_service
 content: |
   ${ found_service['description'] }
-  <br><hr>
+  
+  <hr>
   ### Support
   This service is funded by **${ found_service['support'] }** under **${ found_service['category'] }**, read more here:
-  <a onclick="action_perform('open_support', {support: '${ found_service['support'] }'})" href="#${ service['support'] }">Go to ${ service['support'] }</a>
-  <br><br>
-  <div class="card support_card">
-    <div class="card-body">
-      <h5 class="card-title">Eligibility</h5>
-      <p>Currently we are unable to check your eligibility for this service.</p>
-    </div>
-  </div>
+  <a onclick="action_perform('open_support', {support: '${ found_service['support'] }'})" href="#${ service['support'] }">Go to ${ found_service['support'] }</a>
+
   <hr>
 ---
 # ------------------------------------------------------
@@ -212,9 +253,9 @@ content: |
   You have indicated that you require other services not listed in this application.
   
   <br>Please contact the Royal Society for the Blind for information on the specific service type you require.<br>
-  <br>**Phone:** 1300 944 306<br>
-  **Website:** www.rsb.org.au<br>
-  **Email:** contact@rsb.org.au
+  <br>**Phone:** [1300 944 306](tel:1300 944 306)<br>
+  **Website:** [www.rsb.org.au](www.rsb.org.au)<br>
+  **Email:** [contact@rsb.org.au](mailto:contact@rsb.org.au)
 ---
 # Displays the information about the service and how to get further assistance
 template: template_help
