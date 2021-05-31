@@ -116,6 +116,10 @@ action buttons:
       'label': 'Capacity Building Support',
       'color': 'primary',
       'icon': 'chevron-right'},
+      {'action': 'open_search',
+      'label': 'Home',
+      'color': 'warning',
+      'icon': 'sign-out-alt'},
         {'action': 'https://www.rsb.org.au/',
       'label': 'Exit',
       'color': 'danger'}
