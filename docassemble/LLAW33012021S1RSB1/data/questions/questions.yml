@@ -7,6 +7,7 @@
 # The JavaScript automatically populates the search dropdown with all available services based on their current input
 mandatory: True
 event: open_search
+prevent going back: True
 question: |
   What support is available?
 pre: |
@@ -23,7 +24,7 @@ pre: |
         </div>
       </div>
 subquestion: |
-  The [National Disability Insurance Scheme](https://www.ndis.gov.au) (NDIS) has multiple funding options available for participants on the scheme. Funding varies across the three major categories these include Core Support, Capital Support and Capacity Building Support. Further information is available below:
+  The [National Disability Insurance Scheme](https://www.ndis.gov.au) (NDIS) has multiple funding options available for participants on the Scheme. Funding varies across the three major support categories, these include; Core Support, Capital Support and Capacity Building Support. Further information is available below:
   
   <br>
   %for support in NDIS_supports:

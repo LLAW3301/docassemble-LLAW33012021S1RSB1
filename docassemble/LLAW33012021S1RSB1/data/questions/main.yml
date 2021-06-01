@@ -67,6 +67,15 @@ buttons:
     url: https://www.rsb.org.au/
 under: |
   ${ template_disclaimer_under }
+script: |
+  <script>
+    document.getElementById("dahelptoggle").style.display = "none";
+  </script>
+---
+# Displays the help button in navigation dropdown (Replaces leave button)
+mandatory: True
+code: |
+  menu_items = [ action_menu_item('Help', 'open_help'), {'url': 'https://www.rsb.org.au/', 'label': 'Leave'} ]
 ---
 # Calls the 'Search' question, after they accept disclaimer
 include:
@@ -167,12 +176,18 @@ progress: 100
 #                     Help
 # ------------------------------------------------------
 ---
-# Opens the help page, when they press the button in nav bar
-interview help:
-  label: Help
-  heading: NDIS Basics
-  buttons:
-    - "I do not accept": exit
-  content: |
-    ${ template_help }
+# Opens the help page, when they press the button in nav bar dropdown
+event: open_help
+question: NDIS Basics
+subquestion: |
+  ${ template_help }
+action buttons:
+  - label: Home
+    action: open_search
+    color: warning
+    icon: sign-out-alt
+  - label: Exit
+    action: https://www.rsb.org.au/
+    color: danger
+progress: 100
 ---

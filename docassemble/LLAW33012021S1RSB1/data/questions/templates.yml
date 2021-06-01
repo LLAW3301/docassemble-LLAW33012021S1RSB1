@@ -28,7 +28,7 @@ content: |
 # Welcome page to the service
 template: template_disclaimer
 content: |
-  Welcome to the Royal Society for the Blinds NDIS Guidance Service (‘NDIS Guidance Service’). This application is designed to help you find and engage in services according to your needs within the National Disability Insurance Scheme.
+  Welcome to the Royal Society for the Blind's National Disability Insurance Scheme Guidance Service (‘NDIS Guidance Service’). This application is designed to help you find and engage in services according to your needs within the NDIS.
   <br><hr>
   ### Legal Advice Disclaimer
   This application does not and should not be considered as official, legal advice. It is recommended that you seek your own, independent legal advice regarding the information given in this application.
@@ -36,13 +36,13 @@ content: |
   ### Privacy Policy
   The RSB is committed to protecting the privacy of personal information which the RSB collects, holds and administers.  The RSB will only collect information that is required for it to fulfil its contractual, ethical and legal responsibilities and provide quality and timely services. 
 
-  By continuing you accept these terms and also the terms specified in the Royal Society for the Blind [privacy policy](https://www.rsb.org.au/privacy-policy).
+  By continuing you accept these terms and also the terms specified in the Royal Society for the Blind's [privacy policy](https://www.rsb.org.au/privacy-policy).
 ---
 # Displays when the service was last updated
 template: template_disclaimer_under
 content: |
   <br>
-  Information regarding NDIS is accurate as of *30th April 2021*, you should seek further assistance before moving forward with a provided service.
+  Information regarding the NDIS is accurate as of *4 June 2021*, you should seek further assistance before moving forward with a provided service.
 ---
 # ------------------------------------------------------
 #                   Support Template's
@@ -52,11 +52,11 @@ content: |
 template: template_core
 content: |
   
-  Core Supports help you with everyday activities, your current disability-related needs and to work towards your goals.
+  Core Supports help you with everyday activities, your current disability-related needs and to work towards your goals. It is broken into four different categories; assistance with daily life, transport, consumables, and assistance with daily social and community participation.
   
   <hr>
   ### <span class="header-num">1</span> Assistance with Daily Life
-  Support for any activity you need assistance or help with.These include but are not limited to:
+  Support for any activity you need assistance or help with. These include but are not limited to: 
 
   % for item in NDIS_services:
   % if item['category'] == 'Assistance with Daily Life':
@@ -66,7 +66,7 @@ content: |
   
   <hr>
   ### <span class="header-num">2</span> Transport Allowance
-  This is support that helps you travel to work or other places that will help you achieve the goals in your plan. How you can spend your transport funding and how it is paid to you (whether upfront or in regular payments) will be different for each person. Your LAC will explain how you can use this budget.  
+  This is a support that helps you travel to work or other places that will help you achieve the goals in your plan. How you can spend your transport funding and how it is paid to you (whether upfront or in regular payments) will be different for each person. Your Local Area Coordinator (LAC) will explain how you can use this budget.
   
   Transport funding is split into the 3 levels depending on your circumstances.  
   
@@ -74,8 +74,7 @@ content: |
   * **Level 2** = up to $2472 
   * **Level 3** = up to $3456  
   
-  An important fact about transport funding this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around. 
-  It may include:
+  Transport funding money is only to be used for your personal transport purposes, but in most cases is provided depending on an individual’s ability to access public transport. It cannot pay for your carer or a family member to drive you around. It may include:
   
   % for item in NDIS_services:
   % if item['category'] == 'Transport':
@@ -85,14 +84,13 @@ content: |
 
   <hr>
   ### <span class="header-num">3</span> Consumables
-  Consumables are a support category available to assist participants with purchasing everyday use items. Not all supports in this category are consumable, but continence, Home Enteral Nutrition (HEN) and disability-related health products are included in this category. Any product that would be used daily. For example: 
+  Consumables are a support category available to assist participants with purchasing everyday use items. Not all supports in this category are consumable, but Continence, Home Enteral Nutrition (HEN) and Disability-Related Health Products are included in this category. Any product that would be used daily. For example: 
   
   % for item in NDIS_services:
   % if item['category'] == 'Consumables':
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
   % endif
   % endfor
-  * Low Cost Assistive Technology
   
   <hr>
   ### <span class="header-num">4</span> Assistance with Daily Social and Community Participation
@@ -103,17 +101,13 @@ content: |
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
   % endif
   % endfor
-  * Transport (though this is a separate category as well)
-  * Excursion Costs
-  * Membership Fees
   
   <hr>
 ---
 # Displays the information about 'Capital Support'
 template: template_capital
 content: |
-  Capital Supports are one of the three main funding categories, that often cover the most expensive or complicated items. There is little flexibility regarding the funding as all funds must be reasonable and necessary. This means they must be directly related to your disability and give you clear benefits.
-  There are two sub categories under Capital Supports: Assistive Technology and Home Modifications.
+  Capital Supports are one of the three main funding categories that often cover the most expensive or complicated items. There is little flexibility regarding the funding as all funds must be reasonable and necessary. This means they must be directly related to your disability and give you clear benefits. There are two sub-categories under Capital Supports: Assistive Technology and Home Modifications.
  
   <hr>
   ### <span class="header-num">5</span> Assistive Technology
@@ -124,29 +118,22 @@ content: |
   
   % for item in NDIS_services:
   % if item['category'] == 'Assistive Technology':
+  % if item['ndis_level'] < 2:
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
   % endif
+  % endif
   % endfor
-  * Finger guards; liquid level finders; needle threaders
-  * Tactile markers and dots
-  * Vision Impaired person badges
-  * Large button landline phones
-  * Reading Stands
-  * UV shields and sunglasses
-  * Talking calculator
-  * Large print sodoku book
-  * Large print telephone book
-  * Signature guide; envelope guide
-  * Playing cards, braille cards, braille uno cards, large print scrabble board, tactile dominoes
-  * Colour detector
-  * Computer accessibility software
   
      **These items vary in price, so might go in either Level 2 (between $1500-$5000) or Level 3 (over $5000)**
   Examples might include:
   
-  * Desktop electronic magnifiers
-  * Text to speech devices
-  * Braille note-takers
+  % for item in NDIS_services:
+  % if item['category'] == 'Assistive Technology':
+  % if item['ndis_level'] >= 2:
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endif
+  % endfor
   
   <hr>
   ### <span class="header-num">6</span> Home Modifications
@@ -159,76 +146,104 @@ content: |
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
   % endif
   % endfor
-  * Handrails in shower
-  * Marking personal items to assist with easier identification
-  * Reorganising wardrobe using tactile markings on clothing or coat hangers
-  * Trialling magnifying mirrors for makeup application
-  * Increasing lighting
-  * Grab rails, banister rails, ramps, larger steps, magnetic door catches and lighting.
   
   <hr>
 ---
 # Displays the information about 'Capacity Building Support'
 template: template_capacity
 content: |
-  Capacity building supports are those that help you to maintain your independence and build your skills. 
-  
-  There are nine Capacity Building support categories. You won’t automatically receive funding for all nine, instead funding for these will be based on your NDIS plan goals.
+  Capacity building supports are those that help you to maintain your independence and build your skills. There are nine Capacity Building support categories. You won’t automatically receive funding for all nine, instead funding for these will be based on your NDIS plan goals.
   
   <hr>
   ### <span class="header-num">7</span> Support Coordination
-  Fixed amount that funds a Support Coordinator to help you best utilise your NDIS plan
+  This support helps you with funding a Support Coordinator to help you best utilise your NDIS plan. These services might include:
   
-  * Asking your support coordinator to find and book an appointment with an allied health professional.
+  % for item in NDIS_services:
+  % if item['category'] == 'Support Coordination':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
 
   <hr>
   ### <span class="header-num">8</span> Improved Living Arrangements
-  Support that help you and maintain a place to live.
+  This support helps you to maintain a place to live, by helping to search for rental properties online and meeting tenancy obligations. These services might include:
   
-  * Using breakthu's service to help search for rental properties online and meeting tenancy obligations. 
+  % for item in NDIS_services:
+  % if item['category'] == 'Improved Living Arrangements':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   
   <hr>
   ### <span class="header-num">9</span> Increased Social & Community Participation
-  Supports that provide training and skills to manage life independently and increase participation in your community.
+  This support provides training and skill development to manage life independently and increase participation in your community. These services might include:
   
-  * Helping finding, organising or attend communitu programs or group activities to build relationship skills. 
+  % for item in NDIS_services:
+  % if item['category'] == 'Increased Social & Community Participation':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   
   <hr>
   ### <span class="header-num-large">10</span> Finding & Keeping a Job
-  Services to help you with employment-related supports, including training and assessments. 
+  This support helps you with employment-related supports, including training and assessments. These may include: 
   
-  * Assistance with training and education, updating your resume, applying for jobs and preparing for job interviews. 
+  % for item in NDIS_services:
+  % if item['category'] == 'Finding & Keeping a Job':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   
   <hr>
   ### <span class="header-num-large">11</span> Improved Relationships
-  Helps develop positive behaviours, including social skill development.
+  This support helps develop positive behaviours, including social skill development. This support is able to do this with access to:
   
-  * Regular face to face meetings with your therapist as part of a behaviour management plan.
+  % for item in NDIS_services:
+  % if item['category'] == 'Improved Relationships':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   
   <hr>
   ### <span class="header-num-large">12</span> Improved Health & Wellbeing
-  Services that help you manage diet, exercise, nutrition and physical weelbeing. 
+  This support includes services that help you manage diet, exercise, nutrition and physical wellbeing. This support can help you gain access to:
   
-  * Getting access to a nutritionist who can create individualised healthy meal plans. 
+  % for item in NDIS_services:
+  % if item['category'] == 'Improved Health & Wellbeing':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   
   <hr>
   ### <span class="header-num-large">13</span> Improved Learning
-  Supports that help research and apply for study or training opportunities. 
+  This support helps you to research and apply for study or training opportunities. This may be done through assistance with:
   
-  * Direct support with day to day learning activities like study schedules, adequate accomodation, time management and more. 
+  % for item in NDIS_services:
+  % if item['category'] == 'Improved Learning':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   
   <hr>
   ### <span class="header-num-large">14</span> Improved Life Choices
-  Services to help you with your plan managment, organisational and self-management skills. 
+  This support includes services to help you with your plan management, organisational and self-management skills. This support may assist by providing:  
   
-  * Engaging with a service provider to get financial assistance and plan management services. 
+  % for item in NDIS_services:
+  % if item['category'] == 'Improved Life Choices':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
   
   <hr>
   ### <span class="header-num-large">15</span> Improved Daily Living
-  Covers some services, therapy and/or training by a professional that can help to increase your skills, independence and community participation. These services can also be held individually or in groups. 
+  This support covers some services, therapy and/or training by a professional that can help to increase your skills, independence and community participation. These services can also be held individually or in groups. These services may include access to:  
   
-  * Using breakthru's Occupational Therapy, Psychology & Counselling services to support your goals. 
-
+  % for item in NDIS_services:
+  % if item['category'] == 'Improved Daily Living':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+  
   <hr>
 ---
 # Displays information about the service they selected
@@ -273,5 +288,4 @@ content: |
   *For further information about living with visual impairment and how the RSB’s range of Services can assist, call [1300 944 306](tel:1300 944 306) or email [contact@rsb.org.au](mailto:contact@rsb.org.au)*
   
   <hr>
-  <a tabindex="1" onclick="action_perform('open_search')" class="btn btn-warning btn-da">Back</a>
 ---

@@ -17,13 +17,13 @@ data:
       - Consumables
       - Assistance with Social & Community Participation
     bio: |
-      Core Supports help you with everyday activities, your current disability-related needs and to work towards your goals.
+      Core Supports help you with everyday activities, your current disability-related needs and aims to support you working towards your goals. This can be done with different services and low-cost assistive technology.
   - support: Capital Support
     categories:
       - Assistive Technology
       - Home Modifications
     bio: |
-      Capital Supports include higher-cost pieces of assistive technology, equipment and home or vehicle modifications, and funding for one-off purchases you may need (including Specialist Disability Accommodation).
+      Capital Supports include higher-cost pieces of assistive technology, equipment and home or vehicle modifications, as well as funding for one-off purchases you may need (including Specialist Disability Accommodation). 
   - support: Capacity Building Support
     categories:
       - Coordination of Supports
@@ -36,7 +36,7 @@ data:
       - Improved Life Choices
       - Improved Daily Living
     bio: |
-      Capacity Building Supports help build your independence and skills to help you reach your long-term goals.
+      Capacity Building Supports help to build your independence and skills to help you reach your long-term goals. 
 ---
 # 
 #  List of all available services
@@ -248,7 +248,266 @@ data:
     description: | 
       Pill organisers are marked in braille and standard alphabet for each day of the week. 
       
+  - service: Tactile Markers and Dots 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Tactile markers and dots are an impactful form of assistive technology. They are peel and stick bumps used to create tactile marking on everyday itmes such as computer keyboards, telephone keypads, kitchen objects, piano keys, remote controls etc.  
+
+  - service: Vision Impaired Person Badge
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Identification badges come in various sizes and usually read “Vision Impaired Person”. 
+
+  - service: Large Button Landline Phone
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Landline phones with big buttons make it easier for blind and low vision callers to handle their phone calls.  
+
+  - service: UV Shields and Sunglasses 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Glasses come in various designs and can protect wearer from UV rays. 
+
+  - service: Talking Calculator 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      A calculator that talks. The calculator is equipped with speech output and voices numeric entries and computations in easy-to-understand speech. 
+
+  - service: Large Print Sodoku Book 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Sodoku printed in large font. 
+
+  - service: Large Print Telephone Book 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Large print font telephone books. 
+
+  - service: Signature Guide; Envelope Guide 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Commercial signature guides are approximately the size of a credit card, made of plastic and have a regular cutout in the middle. They are usually in black or darker colours and provide a good contrast with white or light-coloured paper, assisting those who have low vision. 
+
+  - service: Playing Cards, Braille Cards, Braille UNO Cards, Large Print Scrabble Board, Tactile Dominoes 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Various board games and card games are available in larger font and equipped with braille. 
+
+  - service: Colour Detector 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Very light and easy to use, this device has a wide range of useful applications from checking the colour of clothes to the ripeness of fruit while shopping. Simply select one of the three available volume levels and hold the front of the unit against almost any surface – paper, cloth, wood, plastic etc and the colour will be spoken. The device uses our own high quality speech system and is available in several languages. Supplied with a clip-on cover to protect the sensors while being carried in a pocket and an earphone which turns the speaker off to avoid disturbing others. The cover clips onto the back of the case when the device is being used. The case has been ergonomically designed for both right and left handed use and can be held comfortably in several different ways. 
+
+  - service: Computer Accessibility Software 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Computer software that can enlarge and enhance text and read aloud emails and documents.  
+
+  - service: Desktop Electronic Magnifiers 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 2 
+    description: | 
+      Electronic magnifiers can assist in viewing things in a larger format. They can be used for reading books or for drawing.  
+
+  - service: Text to Speech Devices 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 2 
+    description: | 
+      Text-to-speech is a technology that transforms written text into an audible form that people can hear. It is also referred to as “read aloud” technology. Text-to-speech technology can process words on a computer screen or a page and convert them into audio. They are able to help people with vision loss to read text independently.  
+
+  - service: Braille Note-takers 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 2 
+    description: | 
+      A braille note-taker is like a combination of a laptop computer and a Braille display. Depending on the size of the equipment, you are able to use it at home or on the go.  
+
+  - service: Handrails 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Handrails can be installed in home or workplaces to assist with safely manoeuvring around the environment.  
+
+  - service: Lighting 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Different types of lighting might be available depending on needs and use. 
+
+  - service: Clothing Tags 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Braille tags are able to be sewn onto any piece of clothing to identify its colour, or even if it is plaid or striped. The tags can be machine washed and dried. The name of the colour is printed as well as brailled on the tag. 
+
+  - service: Magnetic Door Catches 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Magnetic door catches can be suitable for most doors, especially cabinets and wardrobes. They are used to support door alignment and hold doors closed. They provide complete and secure closure.  
+
+  - service: Ramps 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Ramps allow people to walk between two levels or landing spaces on a gradual slope.
+      
 ########################################################
 ##            Capacibility Building Support           ##
 ########################################################
+
+  - service: Booking Appointments with an Allied Health Professional 
+    support: Capacity Building Support 
+    category: Support Coordination 
+    ndis_level: 0 
+    description: |
+      Assistance with the arrangement of meetings and appointments with others.
+      
+  - service: Tenancy Advice 
+    support: Capacity Building Support 
+    category: Improved Living Arrangements 
+    ndis_level: 0 
+    description: | 
+      Tenancy advice can be provided to you to assist you choosing a place to live, advise you on how much rent you can afford to spend, and what to expect when renting.  
+
+  - service: Rental Property 
+    support: Capacity Building Support 
+    category: Improved Living Arrangements 
+    ndis_level: 0 
+    description: | 
+      A fixed amount of money paid or received regularly for the use of usually an apartment, house, or business space.  
+
+  - service: Attending Community Programs 
+    support: Capacity Building Support 
+    category: Increased Social & Community Participation 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Attending Group Activities 
+    support: Capacity Building Support 
+    category: Increased Social & Community Participation 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Job Interview Assist 
+    support: Capacity Building Support 
+    category: Finding & Keeping a Job 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Applying for a Job 
+    support: Capacity Building Support 
+    category: Finding & Keeping a Job 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Resume Assistance 
+    support: Capacity Building Support 
+    category: Finding & Keeping a Job 
+    ndis_level: 0 
+    description: | 
+      Assistance to formulate a brief account of one's professional or work experience and qualifications, often submitted with an employment application. 
+      
+  - service: Employment Skills Training 
+    support: Capacity Building Support 
+    category: Finding & Keeping a Job 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Meeting with a Therapist 
+    support: Capacity Building Support 
+    category: Improved Relationships 
+    ndis_level: 0 
+    description: | 
+      Therapists are licensed mental health professionals who specialize in helping clients develop better cognitive and emotional skills, reduce symptoms of mental illness, and cope with various life challenges to improve their lives. 
+
+  - service: Meeting with a Nutritionist 
+    support: Capacity Building Support 
+    category: Improved Health & Wellbeing 
+    ndis_level: 0
+    description: | 
+     Access to a person who studies or is an expert in nutrition. 
+
+  - service: Study Schedules 
+    support: Capacity Building Support 
+    category: Improved Learning 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Adequate Student Accomodation 
+    support: Capacity Building Support 
+    category: Improved Learning 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Study Time Management Advice 
+    support: Capacity Building Support 
+    category: Improved Learning 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Plan management 
+    support: Capacity Building Support 
+    category: Improved Life Choices 
+    ndis_level: 0 
+    description: | 
+      Plan management is when a provider supports you to manage funding in your NDIS plan. These providers are known as plan managers. 
+
+  - service: Financial Assistance 
+    support: Capacity Building Support 
+    category: Improved Life Choices 
+    ndis_level: 0 
+    description: | 
+      Financial assistance is any type of monetary help or aid that a person, organization, or government receives. The financial assistance may be in the form of guarantees, loans, cost-sharing arrangements, subsidies, or welfare payments. 
+
+  - service: Counselling Services 
+    support: Capacity Building Support 
+    category: Improved Daily Living 
+    ndis_level: 0 
+    description: | 
+      Counselling is a learning-oriented process, which occurs usually in an interactive relationship, with the aim of helping a person learn more about the self, and to use such understanding to enable the person to become an effective member of society. 
+
+  - service: Meeting with a Psychologist 
+    support: Capacity Building Support 
+    category: Improved Daily Living 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Occupational Therapy 
+    support: Capacity Building Support 
+    category: Improved Daily Living 
+    ndis_level: 0 
+    description: | 
+      Occupational therapy works to improve the life skills or vocational path of their clients/patients. It is a form of rehabilitation that helps people overcome or adapt to their functional deficiencies so they can live as independently as possible. 
+
+
 ---
