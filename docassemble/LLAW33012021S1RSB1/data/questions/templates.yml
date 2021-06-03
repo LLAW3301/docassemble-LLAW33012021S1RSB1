@@ -42,7 +42,7 @@ content: |
 template: template_disclaimer_under
 content: |
   <br>
-  Information regarding the NDIS is accurate as of *4 June 2021*, you should seek further assistance before moving forward with a provided service.
+  Information regarding the NDIS is accurate as of *${ current_date }*, you should seek further assistance before moving forward with a provided service.
 ---
 # ------------------------------------------------------
 #                   Support Template's
@@ -53,6 +53,8 @@ template: template_core
 content: |
   
   Core Supports help you with everyday activities, your current disability-related needs and to work towards your goals. It is broken into four different categories; assistance with daily life, transport, consumables, and assistance with daily social and community participation.
+  
+  *This information is current as of ${ current_date }.*
   
   <hr>
   ### <span class="header-num">1</span> Assistance with Daily Life
@@ -84,11 +86,22 @@ content: |
 
   <hr>
   ### <span class="header-num">3</span> Consumables
-  Consumables are a support category available to assist participants with purchasing everyday use items. Not all supports in this category are consumable, but Continence, Home Enteral Nutrition (HEN) and Disability-Related Health Products are included in this category. Any product that would be used daily. For example: 
+  Consumables are a support category available to assist participants with purchasing everyday use items. Not all supports in this category are consumable, but Continence, Home Enteral Nutrition (HEN), Disability-Related Health Products and low cost, low risk Assistive Technology are included in this category. Any product that would be used daily. For example: 
   
   % for item in NDIS_services:
   % if item['category'] == 'Consumables':
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+  
+  **Level 1 & 2 Assistive Technology (under $1500)**
+  Examples might include:
+  
+  % for item in NDIS_services:
+  % if item['category'] == 'Assistive Technology':
+  % if item['ndis_level'] < 2:
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
   % endif
   % endfor
   
@@ -109,22 +122,15 @@ template: template_capital
 content: |
   Capital Supports are one of the three main funding categories that often cover the most expensive or complicated items. There is little flexibility regarding the funding as all funds must be reasonable and necessary. This means they must be directly related to your disability and give you clear benefits. There are two sub-categories under Capital Supports: Assistive Technology and Home Modifications.
  
+  Pre-approval is required for equipment or home modifications. You will need to apply for capital support based on a quote presented with assessment.
+ 
+  *This information is current as of ${ current_date }.*
+ 
   <hr>
   ### <span class="header-num">5</span> Assistive Technology
   Assistive Technology includes aids or equipment that help you live independently or helps your carer to look after you. It may include mobility aids and communication devices. The cost for assessments, set-up and training to use these assistive technologies are also covered in this funding category.
   
-  **Level One Items (under $1500)**
-  Examples might include:
-  
-  % for item in NDIS_services:
-  % if item['category'] == 'Assistive Technology':
-  % if item['ndis_level'] < 2:
-    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
-  % endif
-  % endif
-  % endfor
-  
-     **These items vary in price, so might go in either Level 2 (between $1500-$5000) or Level 3 (over $5000)**
+  **Level 3 Cost Assistive Technology (over $5000)**
   Examples might include:
   
   % for item in NDIS_services:
@@ -154,58 +160,20 @@ template: template_capacity
 content: |
   Capacity building supports are those that help you to maintain your independence and build your skills. There are nine Capacity Building support categories. You won’t automatically receive funding for all nine, instead funding for these will be based on your NDIS plan goals.
   
+  *This information is current as of ${ current_date }.*
+  
   <hr>
-  ### <span class="header-num">7</span> Support Coordination
-  This support helps you with funding a Support Coordinator to help you best utilise your NDIS plan. These services might include:
+  ### <span class="header-num-large">7</span> Improved Daily Living
+  This support covers some services, therapy and/or training by a professional that can help to increase your skills, independence and community participation. These services can also be held individually or in groups. These services may include access to:  
   
   % for item in NDIS_services:
-  % if item['category'] == 'Support Coordination':
-    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
-  % endif
-  % endfor
-
-  <hr>
-  ### <span class="header-num">8</span> Improved Living Arrangements
-  This support helps you to maintain a place to live, by helping to search for rental properties online and meeting tenancy obligations. These services might include:
-  
-  % for item in NDIS_services:
-  % if item['category'] == 'Improved Living Arrangements':
+  % if item['category'] == 'Improved Daily Living':
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
   % endif
   % endfor
   
   <hr>
-  ### <span class="header-num">9</span> Increased Social & Community Participation
-  This support provides training and skill development to manage life independently and increase participation in your community. These services might include:
-  
-  % for item in NDIS_services:
-  % if item['category'] == 'Increased Social & Community Participation':
-    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
-  % endif
-  % endfor
-  
-  <hr>
-  ### <span class="header-num-large">10</span> Finding & Keeping a Job
-  This support helps you with employment-related supports, including training and assessments. These may include: 
-  
-  % for item in NDIS_services:
-  % if item['category'] == 'Finding & Keeping a Job':
-    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
-  % endif
-  % endfor
-  
-  <hr>
-  ### <span class="header-num-large">11</span> Improved Relationships
-  This support helps develop positive behaviours, including social skill development. This support is able to do this with access to:
-  
-  % for item in NDIS_services:
-  % if item['category'] == 'Improved Relationships':
-    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
-  % endif
-  % endfor
-  
-  <hr>
-  ### <span class="header-num-large">12</span> Improved Health & Wellbeing
+  ### <span class="header-num-large">8</span> Improved Health & Wellbeing
   This support includes services that help you manage diet, exercise, nutrition and physical wellbeing. This support can help you gain access to:
   
   % for item in NDIS_services:
@@ -215,7 +183,57 @@ content: |
   % endfor
   
   <hr>
-  ### <span class="header-num-large">13</span> Improved Learning
+  ### <span class="header-num-large">9</span> Finding & Keeping a Job
+  This support helps you with employment-related supports, including training and assessments. These may include: 
+  
+  % for item in NDIS_services:
+  % if item['category'] == 'Finding & Keeping a Job':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+  
+  <hr>
+  ### <span class="header-num">10</span> Support Coordination
+  This support helps you with funding a Support Coordinator to help you best utilise your NDIS plan. These services might include:
+  
+  % for item in NDIS_services:
+  % if item['category'] == 'Support Coordination':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+
+  <hr>
+  ### <span class="header-num">11</span> Improved Living Arrangements
+  This support helps you to maintain a place to live, by helping to search for rental properties online and meeting tenancy obligations. These services might include:
+  
+  % for item in NDIS_services:
+  % if item['category'] == 'Improved Living Arrangements':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+  
+  <hr>
+  ### <span class="header-num">12</span> Increased Social & Community Participation
+  This support provides training and skill development to manage life independently and increase participation in your community. These services might include:
+  
+  % for item in NDIS_services:
+  % if item['category'] == 'Increased Social & Community Participation':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+  
+  <hr>
+  ### <span class="header-num-large">13</span> Improved Relationships
+  This support helps develop positive behaviours, including social skill development. This support is able to do this with access to:
+  
+  % for item in NDIS_services:
+  % if item['category'] == 'Improved Relationships':
+    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
+  % endfor
+
+  <hr>
+  ### <span class="header-num-large">14</span> Improved Learning
   This support helps you to research and apply for study or training opportunities. This may be done through assistance with:
   
   % for item in NDIS_services:
@@ -225,7 +243,7 @@ content: |
   % endfor
   
   <hr>
-  ### <span class="header-num-large">14</span> Improved Life Choices
+  ### <span class="header-num-large">15</span> Improved Life Choices
   This support includes services to help you with your plan management, organisational and self-management skills. This support may assist by providing:  
   
   % for item in NDIS_services:
@@ -233,17 +251,7 @@ content: |
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
   % endif
   % endfor
-  
-  <hr>
-  ### <span class="header-num-large">15</span> Improved Daily Living
-  This support covers some services, therapy and/or training by a professional that can help to increase your skills, independence and community participation. These services can also be held individually or in groups. These services may include access to:  
-  
-  % for item in NDIS_services:
-  % if item['category'] == 'Improved Daily Living':
-    * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
-  % endif
-  % endfor
-  
+
   <hr>
 ---
 # Displays information about the service they selected

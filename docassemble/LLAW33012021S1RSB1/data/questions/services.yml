@@ -199,21 +199,21 @@ data:
     description: | 
       The white cane and replacement tips and ball are a device to assist with mobility in spaces. It is designed to increase confidence and ability to move around safely. 
 
-  - service: Optic Magnifiers, Magnifying Mirrors, Magnifying Lamps, and Lights 
+  - service: Optical Magnifiers, Magnifying Mirrors, Magnifying Lamps, and Lights 
     support: Capital Support 
     category: Assistive Technology 
     ndis_level: 1 
     description: | 
       Magnifiers are used to enlarge the size of images like print or pictures. Magnifiers can be selected to take into consideration the right fit for individual needs as they come in a variety of types and strengths.  
 
-  - service: Talking Clock
+  - service: Talking Clocks and Watchs
     support: Capital Support
     category: Assistive Technology
     ndis_level: 0
     description: |
        The Talking Clock announces the current time every hour mimicking a human’s voice, also comes with a push button on the top which announces the time. It comes with available options for volume and frequency controls, allowing for the volume to be changed and how often it activates. 
 
-  - service: Talking and Large Faced Watches and Clocks 
+  - service: Large Faced Watches and Clocks 
     support: Capital Support 
     category: Assistive Technology 
     ndis_level: 1 
@@ -247,6 +247,27 @@ data:
     ndis_level: 1 
     description: | 
       Pill organisers are marked in braille and standard alphabet for each day of the week. 
+      
+  - service: Finger Guards 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      Finger guards are a plastic cover that can be placed on the hand or fingers to prevent injury or harm coming to them while doing certain activities like cooking. 
+
+  - service: Liquid Level Finders 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      A liquid level finder is a small device that can be placed on the edge of a cup or container which vibrates when the liquid level reaches it. This can be helpful for avoiding spills and overflows.   
+
+  - service: Needle Threaders 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 1 
+    description: | 
+      An automatic needle threader will thread a needle with a simple push-button operation for single or double threading of needles. Not suitable for fine needles. 
       
   - service: Tactile Markers and Dots 
     support: Capital Support 
@@ -410,19 +431,22 @@ data:
     support: Capacity Building Support 
     category: Increased Social & Community Participation 
     ndis_level: 0 
-    description: Unavailable
+    description: |
+      Assistance attending and getting to and from group activities. This could include anything from social groups to Therapeutic groups.
 
   - service: Attending Group Activities 
     support: Capacity Building Support 
     category: Increased Social & Community Participation 
     ndis_level: 0 
-    description: Unavailable
+    description: |
+      Assistance attending and getting to and from group activities. This could include anything from social groups to Therapeutic groups.
 
-  - service: Job Interview Assist 
+  - service: Job Interview Assistance 
     support: Capacity Building Support 
     category: Finding & Keeping a Job 
     ndis_level: 0 
-    description: Unavailable
+    description: |
+      The opportunity to meet with someone to help you practise and prepare for job interviews. They might practise with you, explain the types of questions that might be asked and what questions should not be asked and you so not have to answer.
 
   - service: Applying for a Job 
     support: Capacity Building Support 
@@ -441,14 +465,15 @@ data:
     support: Capacity Building Support 
     category: Finding & Keeping a Job 
     ndis_level: 0 
-    description: Unavailable
+    description: |
+      Employment Skills Training could be either one-on-one training and coaching or group skills training to assist with developing your skills in a workplace.
 
   - service: Meeting with a Therapist 
     support: Capacity Building Support 
     category: Improved Relationships 
     ndis_level: 0 
     description: | 
-      Therapists are licensed mental health professionals who specialize in helping clients develop better cognitive and emotional skills, reduce symptoms of mental illness, and cope with various life challenges to improve their lives. 
+      Therapists are licensed mental health professionals who specialise in helping clients develop better cognitive and emotional skills, reduce symptoms of mental illness, and cope with various life challenges to improve their lives. 
 
   - service: Meeting with a Nutritionist 
     support: Capacity Building Support 
@@ -456,24 +481,41 @@ data:
     ndis_level: 0
     description: | 
      Access to a person who studies or is an expert in nutrition. 
+     
+  - service: Exercise Physiologist
+    support: Capacity Building Support 
+    category: Improved Health & Wellbeing 
+    ndis_level: 0
+    description: | 
+     An exercise physiologist is an allied health professional with extensive training in understanding the body's response to exercise. Exercise physiologists apply their knowledge with a therapeutic approach aiming to improve quality of life, disease management or treatment outcomes across all populations. 
+
+  - service: Physiotherapist 
+    support: Capacity Building Support 
+    category: Improved Health & Wellbeing  
+    ndis_level: 0 
+    description: | 
+      Physiotherapy is the treatment of injury, disease and disorders through physical methods — such as exercise, massage, manipulation and other treatments — over medication and surgery. 
 
   - service: Study Schedules 
     support: Capacity Building Support 
     category: Improved Learning 
     ndis_level: 0 
-    description: Unavailable
+    description: |
+      Arranging a time to meet with someone to assist with the planning and attendance of a study schedule.
 
   - service: Adequate Student Accomodation 
     support: Capacity Building Support 
     category: Improved Learning 
     ndis_level: 0 
-    description: Unavailable
+    description: |
+      This might look like someone meeting with you to help you look for appropriate housing and helping arrange everything that is necessary for that housing. 
 
   - service: Study Time Management Advice 
     support: Capacity Building Support 
     category: Improved Learning 
     ndis_level: 0 
-    description: Unavailable
+    description: |
+      Someone to help organise and arrange the time management and planning of a study schedule. 
 
   - service: Plan management 
     support: Capacity Building Support 
@@ -482,7 +524,7 @@ data:
     description: | 
       Plan management is when a provider supports you to manage funding in your NDIS plan. These providers are known as plan managers. 
 
-  - service: Financial Assistance 
+  - service: Financial Advice 
     support: Capacity Building Support 
     category: Improved Life Choices 
     ndis_level: 0 
@@ -494,13 +536,14 @@ data:
     category: Improved Daily Living 
     ndis_level: 0 
     description: | 
-      Counselling is a learning-oriented process, which occurs usually in an interactive relationship, with the aim of helping a person learn more about the self, and to use such understanding to enable the person to become an effective member of society. 
+      Counselling is a learning-oriented process, which occurs usually in an interactive relationship, with the aim of helping a person learn more about the self, and to use such understanding to enable the person to become an effective member of society. This could be useful to come to terms with accepting your vision loss.
 
   - service: Meeting with a Psychologist 
     support: Capacity Building Support 
     category: Improved Daily Living 
     ndis_level: 0 
-    description: Unavailable
+    description: |
+      A psychologist may assess, diagnose, and treat the psychological problems and the behavioural dysfunctions resulting from, or related to physical and mental health. In addition, they play a major role in the promotion of healthy behavior, preventing diseases and improving patients' quality of life.
 
   - service: Occupational Therapy 
     support: Capacity Building Support 
@@ -509,5 +552,18 @@ data:
     description: | 
       Occupational therapy works to improve the life skills or vocational path of their clients/patients. It is a form of rehabilitation that helps people overcome or adapt to their functional deficiencies so they can live as independently as possible. 
 
-
+  - service: Orientation and Mobility Training  
+    support: Capacity Building Support 
+    category: Improved Daily Living  
+    ndis_level: 0 
+    description: | 
+      For people who are blind or have low vision, orientation and mobility skills 	are key to enabling them to independently and confidently take on any environment they may encounter. Orientation and mobility is a set of skills that allow for a person who is blind or has low vision to independently and safely navigate their way through their environment. 
+    
+  - service: Assistive Technology Training  
+    support: Capacity Building Support 
+    category: Improved Daily Living 
+    ndis_level: 0 
+    description: | 
+      Assistive Technology training can provide training for assistive technology in one-on-one or in a group by a training professional.  These tools are called assistive technology (AT). AT is any device, software, or equipment that helps people learn, communicate, or function better. AT can be as high-tech as a computer and can require training to use. Training is usually provided one on one or in a group by a training professional. 
+   
 ---

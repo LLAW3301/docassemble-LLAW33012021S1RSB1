@@ -46,6 +46,7 @@ include:
 mandatory: True
 code: |
   set_parts(logo='<img src="' + image_logo.url_for() + '" style="height: 50px;">')
+  current_date = "4 June 2021"
 ---
 # Displays the footer content at bottom of screen
 default screen parts:
