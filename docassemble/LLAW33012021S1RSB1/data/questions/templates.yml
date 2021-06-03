@@ -90,7 +90,9 @@ content: |
   
   % for item in NDIS_services:
   % if item['category'] == 'Consumables':
+  % if item['ndis_level'] < 1:
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
+  % endif
   % endif
   % endfor
   
@@ -98,8 +100,8 @@ content: |
   Examples might include:
   
   % for item in NDIS_services:
-  % if item['category'] == 'Assistive Technology':
-  % if item['ndis_level'] < 2:
+  % if item['category'] == 'Consumables':
+  % if item['ndis_level'] > 0:
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
   % endif
   % endif
@@ -135,9 +137,7 @@ content: |
   
   % for item in NDIS_services:
   % if item['category'] == 'Assistive Technology':
-  % if item['ndis_level'] >= 2:
     * [ ${ item['service'] } ](${ url_action('open_service', service=item['service']) })
-  % endif
   % endif
   % endfor
   

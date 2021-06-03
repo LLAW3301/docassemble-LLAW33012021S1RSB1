@@ -174,6 +174,160 @@ data:
     description: |
       Any product that would be used regularly. 
 
+  - service: White Canes and Replacement Tips and Ball 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      The white cane and replacement tips and ball are a device to assist with mobility in spaces. It is designed to increase confidence and ability to move around safely. 
+
+  - service: Optical Magnifiers, Magnifying Mirrors, Magnifying Lamps, and Lights 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Magnifiers are used to enlarge the size of images like print or pictures. Magnifiers can be selected to take into consideration the right fit for individual needs as they come in a variety of types and strengths.  
+
+  - service: Talking Clocks and Watchs
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1
+    description: |
+       The Talking Clock announces the current time every hour mimicking a human’s voice, also comes with a push button on the top which announces the time. It comes with available options for volume and frequency controls, allowing for the volume to be changed and how often it activates. 
+
+  - service: Large Faced Watches and Clocks 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Also called a speaking clock or an auditory clock, it is a timekeeping device that presents the time as sounds.  
+
+  - service: Talking Bathroom and Kitchen Scales 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Talking scales are designed to calculate weight via sound. It will dictate instructions on its use (when to step on and off) and will verbally inform the weight it records. Talking scales are often interchangeable between metrics, the audio is clear and the volume is adjustable. 
+
+  - service: Talking Blood Pressure Monitor 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Talking blood pressure monitors will display and speak a person’s blood pressure and pulse. Often volume control is available and is user friendly.  
+
+  - service: Talking Thermometer 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      A talking thermometer will display and speak the recorded temperature. 
+
+  - service: Pill Organisers 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Pill organisers are marked in braille and standard alphabet for each day of the week. 
+      
+  - service: Finger Guards 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Finger guards are a plastic cover that can be placed on the hand or fingers to prevent injury or harm coming to them while doing certain activities like cooking. 
+
+  - service: Liquid Level Finders 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      A liquid level finder is a small device that can be placed on the edge of a cup or container which vibrates when the liquid level reaches it. This can be helpful for avoiding spills and overflows.   
+
+  - service: Needle Threaders 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      An automatic needle threader will thread a needle with a simple push-button operation for single or double threading of needles. Not suitable for fine needles. 
+      
+  - service: Tactile Markers and Dots 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Tactile markers and dots are an impactful form of assistive technology. They are peel and stick bumps used to create tactile marking on everyday itmes such as computer keyboards, telephone keypads, kitchen objects, piano keys, remote controls etc.  
+
+  - service: Vision Impaired Person Badge
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Identification badges come in various sizes and usually read “Vision Impaired Person”. 
+
+  - service: Large Button Landline Phone
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Landline phones with big buttons make it easier for blind and low vision callers to handle their phone calls.  
+
+  - service: UV Shields and Sunglasses 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Glasses come in various designs and can protect wearer from UV rays. 
+
+  - service: Talking Calculator 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      A calculator that talks. The calculator is equipped with speech output and voices numeric entries and computations in easy-to-understand speech. 
+
+  - service: Large Print Sodoku Book 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Sodoku printed in large font. 
+
+  - service: Large Print Telephone Book 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Large print font telephone books. 
+
+  - service: Signature Guide; Envelope Guide 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Commercial signature guides are approximately the size of a credit card, made of plastic and have a regular cutout in the middle. They are usually in black or darker colours and provide a good contrast with white or light-coloured paper, assisting those who have low vision. 
+
+  - service: Playing Cards, Braille Cards, Braille UNO Cards, Large Print Scrabble Board, Tactile Dominoes 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Various board games and card games are available in larger font and equipped with braille. 
+
+  - service: Colour Detector 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Very light and easy to use, this device has a wide range of useful applications from checking the colour of clothes to the ripeness of fruit while shopping. Simply select one of the three available volume levels and hold the front of the unit against almost any surface – paper, cloth, wood, plastic etc and the colour will be spoken. The device uses our own high quality speech system and is available in several languages. Supplied with a clip-on cover to protect the sensors while being carried in a pocket and an earphone which turns the speaker off to avoid disturbing others. The cover clips onto the back of the case when the device is being used. The case has been ergonomically designed for both right and left handed use and can be held comfortably in several different ways. 
+
+  - service: Computer Accessibility Software 
+    support: Core Support 
+    category: Consumables
+    ndis_level: 1 
+    description: | 
+      Computer software that can enlarge and enhance text and read aloud emails and documents.  
+
   - service: Social Worker 
     support: Core Support 
     category: Assistance with Daily Social and Community Participation
@@ -191,160 +345,6 @@ data:
 ########################################################
 ##                  Capital Support                   ##
 ########################################################
-
-  - service: White Canes and Replacement Tips and Ball 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      The white cane and replacement tips and ball are a device to assist with mobility in spaces. It is designed to increase confidence and ability to move around safely. 
-
-  - service: Optical Magnifiers, Magnifying Mirrors, Magnifying Lamps, and Lights 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Magnifiers are used to enlarge the size of images like print or pictures. Magnifiers can be selected to take into consideration the right fit for individual needs as they come in a variety of types and strengths.  
-
-  - service: Talking Clocks and Watchs
-    support: Capital Support
-    category: Assistive Technology
-    ndis_level: 0
-    description: |
-       The Talking Clock announces the current time every hour mimicking a human’s voice, also comes with a push button on the top which announces the time. It comes with available options for volume and frequency controls, allowing for the volume to be changed and how often it activates. 
-
-  - service: Large Faced Watches and Clocks 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Also called a speaking clock or an auditory clock, it is a timekeeping device that presents the time as sounds.  
-
-  - service: Talking Bathroom and Kitchen Scales 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Talking scales are designed to calculate weight via sound. It will dictate instructions on its use (when to step on and off) and will verbally inform the weight it records. Talking scales are often interchangeable between metrics, the audio is clear and the volume is adjustable. 
-
-  - service: Talking Blood Pressure Monitor 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Talking blood pressure monitors will display and speak a person’s blood pressure and pulse. Often volume control is available and is user friendly.  
-
-  - service: Talking Thermometer 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      A talking thermometer will display and speak the recorded temperature. 
-
-  - service: Pill Organisers 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Pill organisers are marked in braille and standard alphabet for each day of the week. 
-      
-  - service: Finger Guards 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Finger guards are a plastic cover that can be placed on the hand or fingers to prevent injury or harm coming to them while doing certain activities like cooking. 
-
-  - service: Liquid Level Finders 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      A liquid level finder is a small device that can be placed on the edge of a cup or container which vibrates when the liquid level reaches it. This can be helpful for avoiding spills and overflows.   
-
-  - service: Needle Threaders 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      An automatic needle threader will thread a needle with a simple push-button operation for single or double threading of needles. Not suitable for fine needles. 
-      
-  - service: Tactile Markers and Dots 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Tactile markers and dots are an impactful form of assistive technology. They are peel and stick bumps used to create tactile marking on everyday itmes such as computer keyboards, telephone keypads, kitchen objects, piano keys, remote controls etc.  
-
-  - service: Vision Impaired Person Badge
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Identification badges come in various sizes and usually read “Vision Impaired Person”. 
-
-  - service: Large Button Landline Phone
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Landline phones with big buttons make it easier for blind and low vision callers to handle their phone calls.  
-
-  - service: UV Shields and Sunglasses 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Glasses come in various designs and can protect wearer from UV rays. 
-
-  - service: Talking Calculator 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      A calculator that talks. The calculator is equipped with speech output and voices numeric entries and computations in easy-to-understand speech. 
-
-  - service: Large Print Sodoku Book 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Sodoku printed in large font. 
-
-  - service: Large Print Telephone Book 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Large print font telephone books. 
-
-  - service: Signature Guide; Envelope Guide 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Commercial signature guides are approximately the size of a credit card, made of plastic and have a regular cutout in the middle. They are usually in black or darker colours and provide a good contrast with white or light-coloured paper, assisting those who have low vision. 
-
-  - service: Playing Cards, Braille Cards, Braille UNO Cards, Large Print Scrabble Board, Tactile Dominoes 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Various board games and card games are available in larger font and equipped with braille. 
-
-  - service: Colour Detector 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Very light and easy to use, this device has a wide range of useful applications from checking the colour of clothes to the ripeness of fruit while shopping. Simply select one of the three available volume levels and hold the front of the unit against almost any surface – paper, cloth, wood, plastic etc and the colour will be spoken. The device uses our own high quality speech system and is available in several languages. Supplied with a clip-on cover to protect the sensors while being carried in a pocket and an earphone which turns the speaker off to avoid disturbing others. The cover clips onto the back of the case when the device is being used. The case has been ergonomically designed for both right and left handed use and can be held comfortably in several different ways. 
-
-  - service: Computer Accessibility Software 
-    support: Capital Support 
-    category: Assistive Technology 
-    ndis_level: 1 
-    description: | 
-      Computer software that can enlarge and enhance text and read aloud emails and documents.  
 
   - service: Desktop Electronic Magnifiers 
     support: Capital Support 
