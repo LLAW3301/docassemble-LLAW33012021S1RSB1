@@ -9,7 +9,7 @@ metadata:
   title: |
     NDIS Guidance Service for Royal Society for the Blind
   short title: |
-    NDIS Service Directory
+    NDIS Guidance Service
   authors:
     - name: Jeremy Webster
     - name: Abigail Groocock
@@ -59,7 +59,7 @@ default screen parts:
 ---
 # Displays the Welcome/Disclaimer page
 mandatory: True
-question: NDIS Service Directory
+question: NDIS Guidance Service
 subquestion: |
   ${ template_disclaimer }
 buttons:
