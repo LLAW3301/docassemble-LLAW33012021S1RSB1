@@ -1,0 +1,569 @@
+---
+# 
+#  List of all available funding support types
+#
+# - support: NAME OF THE SUPPORT
+#   categories: LIST OF SUPPORT CATEGORIES
+#   bio: SMALL SUMMARY OF SUPPORT
+#
+---
+variable name: NDIS_supports
+user objects: true
+data:
+  - support: Core Support
+    categories:
+      - Assistance with Daily Life
+      - Transport
+      - Consumables
+      - Assistance with Social & Community Participation
+    bio: |
+      Core Supports help you with everyday activities, your current disability-related needs and aims to support you working towards your goals. This can be done with different services and low-cost assistive technology.
+  - support: Capital Support
+    categories:
+      - Assistive Technology
+      - Home Modifications
+    bio: |
+      Capital Supports include higher-cost pieces of assistive technology, equipment and home or vehicle modifications, as well as funding for one-off purchases you may need (including Specialist Disability Accommodation). 
+  - support: Capacity Building Support
+    categories:
+      - Coordination of Supports
+      - Improved Living Arrangements
+      - Increased Social and Community Participation
+      - Finding and Keeping a Job
+      - Improved Relationships
+      - Improved Health and Wellbeing
+      - Improved Learning
+      - Improved Life Choices
+      - Improved Daily Living
+    bio: |
+      Capacity Building Supports help to build your independence and skills to help you reach your long-term goals. 
+---
+# 
+#  List of all available services
+#
+# - service: NAME OF THE SERVICE
+#   support: TYPE OF SUPPOER (Core, Capital, Capacity Building)
+#   category: NAME OF THE SUPPORT CATEGORY
+#   ndis_level: LEVEL OF NDIS TO BE ELIGBILE
+#   description: SUMMARY OF SERVICE
+#
+---
+variable name: NDIS_services
+use objects: true
+data:
+
+########################################################
+##                  Core Support                     ##
+########################################################
+
+	- service: Cleaner
+	  support: Core Support
+	  category: Assistance with Daily Life
+	  ndis_level: 0
+	  description: |
+      Once a week a cleaner will be sent to your house to clean. 
+
+  - service: Gardener 
+    support: Core Support 
+    category: Assistance with Daily Life 
+    ndis_level: 0 
+    description: | 
+      Once a month a gardener will be sent to your house to do the gardening. 
+
+  - service: Grocery Shopping 
+    support: Core Support 
+    category: Assistance with Daily Life 
+    ndis_level: 0 
+    description: |
+      Someone will be available to either help you do your grocery shopping or do it for you. 
+      
+  - service: Cook 
+    support: Core Support 
+    category: Assistance with Daily Life 
+    ndis_level: 0 
+    description: Once a week a cook will be sent to your house. 
+
+  - service: Bus 
+    support: Core Support 
+    category: Transport 
+    ndis_level: 0 
+    description: |
+      Transport funding is split into the 3 levels depending on your circumstances.           
+      <ul>
+      <li>Level 1 = up to $1606</li>
+      <li>Level 2 = up to $2472</li>
+      <li>Level 3 = up to $3456</li>
+      </ul>
+      
+      Important facts about transport funding this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around 
+
+  - service: Taxi 
+    support: Core Support 
+    category: Transport 
+    ndis_level: 0 
+    description: |
+      Transport funding is split into the 3 levels depending on your circumstances.           
+      <ul>
+      <li>Level 1 = up to $1606</li>
+      <li>Level 2 = up to $2472</li>
+      <li>Level 3 = up to $3456</li>
+      </ul>
+      
+      Important facts about transport funding this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around 
+
+  - service: Train 
+    support: Core Support 
+    category: Transport 
+    ndis_level: 0 
+    description: |
+      Transport funding is split into the 3 levels depending on your circumstances.           
+      <ul>
+      <li>Level 1 = up to $1606</li>
+      <li>Level 2 = up to $2472</li>
+      <li>Level 3 = up to $3456</li>
+      </ul>
+      
+      Important facts about transport funding this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around 
+
+  - service: Car Service 
+    support: Core Support 
+    category: Transport 
+    ndis_level: 0 
+    description: |
+      Transport funding is split into the 3 levels depending on your circumstances.           
+      <ul>
+      <li>Level 1 = up to $1606</li>
+      <li>Level 2 = up to $2472</li>
+      <li>Level 3 = up to $3456</li>
+      </ul>
+      
+      Important facts about transport funding this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around 
+
+  - service: Plane 
+    support: Core Support 
+    category: Transport 
+    ndis_level: 0 
+    description: |
+      Transport funding is split into the 3 levels depending on your circumstances.           
+      <ul>
+      <li>Level 1 = up to $1606</li>
+      <li>Level 2 = up to $2472</li>
+      <li>Level 3 = up to $3456</li>
+      </ul>
+      
+      Important facts about transport funding this money is for your transport only, it may cover public transport but is most needed for those who cannot access public transport. It cannot pay for your carer or a family member to drive you around 
+
+  - service: Toiletries 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 0 
+    description: |
+      Any product that would be used regularly every week, these may include Soap and Shampoo. 
+
+  - service: Food Products
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 0 
+    description: |
+      Any food item, like fruit, meat, bread, milk, etc. 
+
+  - service: Cleaning Products 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 0 
+    description: |
+      Any product that would be used regularly. 
+
+  - service: White Canes and Replacement Tips and Ball 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      The white cane and replacement tips and ball are a device to assist with mobility in spaces. It is designed to increase confidence and ability to move around safely. 
+
+  - service: Optical Magnifiers, Magnifying Mirrors, Magnifying Lamps, and Lights 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Magnifiers are used to enlarge the size of images like print or pictures. Magnifiers can be selected to take into consideration the right fit for individual needs as they come in a variety of types and strengths.  
+
+  - service: Talking Clocks and Watchs
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1
+    description: |
+       The Talking Clock announces the current time every hour mimicking a human’s voice, also comes with a push button on the top which announces the time. It comes with available options for volume and frequency controls, allowing for the volume to be changed and how often it activates. 
+
+  - service: Large Faced Watches and Clocks 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Also called a speaking clock or an auditory clock, it is a timekeeping device that presents the time as sounds.  
+
+  - service: Talking Bathroom and Kitchen Scales 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Talking scales are designed to calculate weight via sound. It will dictate instructions on its use (when to step on and off) and will verbally inform the weight it records. Talking scales are often interchangeable between metrics, the audio is clear and the volume is adjustable. 
+
+  - service: Talking Blood Pressure Monitor 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Talking blood pressure monitors will display and speak a person’s blood pressure and pulse. Often volume control is available and is user friendly.  
+
+  - service: Talking Thermometer 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      A talking thermometer will display and speak the recorded temperature. 
+
+  - service: Pill Organisers 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Pill organisers are marked in braille and standard alphabet for each day of the week. 
+      
+  - service: Finger Guards 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Finger guards are a plastic cover that can be placed on the hand or fingers to prevent injury or harm coming to them while doing certain activities like cooking. 
+
+  - service: Liquid Level Finders 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      A liquid level finder is a small device that can be placed on the edge of a cup or container which vibrates when the liquid level reaches it. This can be helpful for avoiding spills and overflows.   
+
+  - service: Needle Threaders 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      An automatic needle threader will thread a needle with a simple push-button operation for single or double threading of needles. Not suitable for fine needles. 
+      
+  - service: Tactile Markers and Dots 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Tactile markers and dots are an impactful form of assistive technology. They are peel and stick bumps used to create tactile marking on everyday itmes such as computer keyboards, telephone keypads, kitchen objects, piano keys, remote controls etc.  
+
+  - service: Vision Impaired Person Badge
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Identification badges come in various sizes and usually read “Vision Impaired Person”. 
+
+  - service: Large Button Landline Phone
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Landline phones with big buttons make it easier for blind and low vision callers to handle their phone calls.  
+
+  - service: UV Shields and Sunglasses 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Glasses come in various designs and can protect wearer from UV rays. 
+
+  - service: Talking Calculator 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      A calculator that talks. The calculator is equipped with speech output and voices numeric entries and computations in easy-to-understand speech. 
+
+  - service: Large Print Sodoku Book 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Sodoku printed in large font. 
+
+  - service: Large Print Telephone Book 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Large print font telephone books. 
+
+  - service: Signature Guide; Envelope Guide 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Commercial signature guides are approximately the size of a credit card, made of plastic and have a regular cutout in the middle. They are usually in black or darker colours and provide a good contrast with white or light-coloured paper, assisting those who have low vision. 
+
+  - service: Playing Cards, Braille Cards, Braille UNO Cards, Large Print Scrabble Board, Tactile Dominoes 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Various board games and card games are available in larger font and equipped with braille. 
+
+  - service: Colour Detector 
+    support: Core Support 
+    category: Consumables 
+    ndis_level: 1 
+    description: | 
+      Very light and easy to use, this device has a wide range of useful applications from checking the colour of clothes to the ripeness of fruit while shopping. Simply select one of the three available volume levels and hold the front of the unit against almost any surface – paper, cloth, wood, plastic etc and the colour will be spoken. The device uses our own high quality speech system and is available in several languages. Supplied with a clip-on cover to protect the sensors while being carried in a pocket and an earphone which turns the speaker off to avoid disturbing others. The cover clips onto the back of the case when the device is being used. The case has been ergonomically designed for both right and left handed use and can be held comfortably in several different ways. 
+
+  - service: Computer Accessibility Software 
+    support: Core Support 
+    category: Consumables
+    ndis_level: 1 
+    description: | 
+      Computer software that can enlarge and enhance text and read aloud emails and documents.  
+
+  - service: Social Worker 
+    support: Core Support 
+    category: Assistance with Daily Social and Community Participation
+    ndis_level: 0 
+    description: |
+      Social workers are people who can help clients and their families through crisis and to help them solve problems they are facing like legal problems, housing problems, family problems, etc. 
+
+  - service: Support Worker 
+    support: Core Support 
+    category: Assistance with Daily Social and Community Participation
+    ndis_level: 0 
+    description: |
+      A Support worker is someone who can help with practical things like filling out paperwork, household tasks, personal care, administering medication, and also emotional support.  
+
+########################################################
+##                  Capital Support                   ##
+########################################################
+
+  - service: Desktop Electronic Magnifiers 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 2 
+    description: | 
+      Electronic magnifiers can assist in viewing things in a larger format. They can be used for reading books or for drawing.  
+
+  - service: Text to Speech Devices 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 2 
+    description: | 
+      Text-to-speech is a technology that transforms written text into an audible form that people can hear. It is also referred to as “read aloud” technology. Text-to-speech technology can process words on a computer screen or a page and convert them into audio. They are able to help people with vision loss to read text independently.  
+
+  - service: Braille Note-takers 
+    support: Capital Support 
+    category: Assistive Technology 
+    ndis_level: 2 
+    description: | 
+      A braille note-taker is like a combination of a laptop computer and a Braille display. Depending on the size of the equipment, you are able to use it at home or on the go.  
+
+  - service: Handrails 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Handrails can be installed in home or workplaces to assist with safely manoeuvring around the environment.  
+
+  - service: Lighting 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Different types of lighting might be available depending on needs and use. 
+
+  - service: Clothing Tags 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Braille tags are able to be sewn onto any piece of clothing to identify its colour, or even if it is plaid or striped. The tags can be machine washed and dried. The name of the colour is printed as well as brailled on the tag. 
+
+  - service: Magnetic Door Catches 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Magnetic door catches can be suitable for most doors, especially cabinets and wardrobes. They are used to support door alignment and hold doors closed. They provide complete and secure closure.  
+
+  - service: Ramps 
+    support: Capital Support 
+    category: Home Modifications 
+    ndis_level: 0 
+    description: | 
+      Ramps allow people to walk between two levels or landing spaces on a gradual slope.
+      
+########################################################
+##            Capacibility Building Support           ##
+########################################################
+
+  - service: Booking Appointments with an Allied Health Professional 
+    support: Capacity Building Support 
+    category: Support Coordination 
+    ndis_level: 0 
+    description: |
+      Assistance with the arrangement of meetings and appointments with others.
+      
+  - service: Tenancy Advice 
+    support: Capacity Building Support 
+    category: Improved Living Arrangements 
+    ndis_level: 0 
+    description: | 
+      Tenancy advice can be provided to you to assist you choosing a place to live, advise you on how much rent you can afford to spend, and what to expect when renting.  
+
+  - service: Rental Property 
+    support: Capacity Building Support 
+    category: Improved Living Arrangements 
+    ndis_level: 0 
+    description: | 
+      A fixed amount of money paid or received regularly for the use of usually an apartment, house, or business space.  
+
+  - service: Attending Community Programs 
+    support: Capacity Building Support 
+    category: Increased Social & Community Participation 
+    ndis_level: 0 
+    description: |
+      Assistance attending and getting to and from group activities. This could include anything from social groups to Therapeutic groups.
+
+  - service: Attending Group Activities 
+    support: Capacity Building Support 
+    category: Increased Social & Community Participation 
+    ndis_level: 0 
+    description: |
+      Assistance attending and getting to and from group activities. This could include anything from social groups to Therapeutic groups.
+
+  - service: Job Interview Assistance 
+    support: Capacity Building Support 
+    category: Finding & Keeping a Job 
+    ndis_level: 0 
+    description: |
+      The opportunity to meet with someone to help you practise and prepare for job interviews. They might practise with you, explain the types of questions that might be asked and what questions should not be asked and you so not have to answer.
+
+  - service: Applying for a Job 
+    support: Capacity Building Support 
+    category: Finding & Keeping a Job 
+    ndis_level: 0 
+    description: Unavailable
+
+  - service: Resume Assistance 
+    support: Capacity Building Support 
+    category: Finding & Keeping a Job 
+    ndis_level: 0 
+    description: | 
+      Assistance to formulate a brief account of one's professional or work experience and qualifications, often submitted with an employment application. 
+      
+  - service: Employment Skills Training 
+    support: Capacity Building Support 
+    category: Finding & Keeping a Job 
+    ndis_level: 0 
+    description: |
+      Employment Skills Training could be either one-on-one training and coaching or group skills training to assist with developing your skills in a workplace.
+
+  - service: Meeting with a Therapist 
+    support: Capacity Building Support 
+    category: Improved Relationships 
+    ndis_level: 0 
+    description: | 
+      Therapists are licensed mental health professionals who specialise in helping clients develop better cognitive and emotional skills, reduce symptoms of mental illness, and cope with various life challenges to improve their lives. 
+
+  - service: Meeting with a Nutritionist 
+    support: Capacity Building Support 
+    category: Improved Health & Wellbeing 
+    ndis_level: 0
+    description: | 
+     Access to a person who studies or is an expert in nutrition. 
+     
+  - service: Exercise Physiologist
+    support: Capacity Building Support 
+    category: Improved Health & Wellbeing 
+    ndis_level: 0
+    description: | 
+     An exercise physiologist is an allied health professional with extensive training in understanding the body's response to exercise. Exercise physiologists apply their knowledge with a therapeutic approach aiming to improve quality of life, disease management or treatment outcomes across all populations. 
+
+  - service: Physiotherapist 
+    support: Capacity Building Support 
+    category: Improved Health & Wellbeing  
+    ndis_level: 0 
+    description: | 
+      Physiotherapy is the treatment of injury, disease and disorders through physical methods — such as exercise, massage, manipulation and other treatments — over medication and surgery. 
+
+  - service: Study Schedules 
+    support: Capacity Building Support 
+    category: Improved Learning 
+    ndis_level: 0 
+    description: |
+      Arranging a time to meet with someone to assist with the planning and attendance of a study schedule.
+
+  - service: Adequate Student Accomodation 
+    support: Capacity Building Support 
+    category: Improved Learning 
+    ndis_level: 0 
+    description: |
+      This might look like someone meeting with you to help you look for appropriate housing and helping arrange everything that is necessary for that housing. 
+
+  - service: Study Time Management Advice 
+    support: Capacity Building Support 
+    category: Improved Learning 
+    ndis_level: 0 
+    description: |
+      Someone to help organise and arrange the time management and planning of a study schedule. 
+
+  - service: Plan management 
+    support: Capacity Building Support 
+    category: Improved Life Choices 
+    ndis_level: 0 
+    description: | 
+      Plan management is when a provider supports you to manage funding in your NDIS plan. These providers are known as plan managers. 
+
+  - service: Financial Advice 
+    support: Capacity Building Support 
+    category: Improved Life Choices 
+    ndis_level: 0 
+    description: | 
+      Financial assistance is any type of monetary help or aid that a person, organization, or government receives. The financial assistance may be in the form of guarantees, loans, cost-sharing arrangements, subsidies, or welfare payments. 
+
+  - service: Counselling Services 
+    support: Capacity Building Support 
+    category: Improved Daily Living 
+    ndis_level: 0 
+    description: | 
+      Counselling is a learning-oriented process, which occurs usually in an interactive relationship, with the aim of helping a person learn more about the self, and to use such understanding to enable the person to become an effective member of society. This could be useful to come to terms with accepting your vision loss.
+
+  - service: Meeting with a Psychologist 
+    support: Capacity Building Support 
+    category: Improved Daily Living 
+    ndis_level: 0 
+    description: |
+      A psychologist may assess, diagnose, and treat the psychological problems and the behavioural dysfunctions resulting from, or related to physical and mental health. In addition, they play a major role in the promotion of healthy behavior, preventing diseases and improving patients' quality of life.
+
+  - service: Occupational Therapy 
+    support: Capacity Building Support 
+    category: Improved Daily Living 
+    ndis_level: 0 
+    description: | 
+      Occupational therapy works to improve the life skills or vocational path of their clients/patients. It is a form of rehabilitation that helps people overcome or adapt to their functional deficiencies so they can live as independently as possible. 
+
+  - service: Orientation and Mobility Training  
+    support: Capacity Building Support 
+    category: Improved Daily Living  
+    ndis_level: 0 
+    description: | 
+      For people who are blind or have low vision, orientation and mobility skills 	are key to enabling them to independently and confidently take on any environment they may encounter. Orientation and mobility is a set of skills that allow for a person who is blind or has low vision to independently and safely navigate their way through their environment. 
+    
+  - service: Assistive Technology Training  
+    support: Capacity Building Support 
+    category: Improved Daily Living 
+    ndis_level: 0 
+    description: | 
+      Assistive Technology training can provide training for assistive technology in one-on-one or in a group by a training professional.  These tools are called assistive technology (AT). AT is any device, software, or equipment that helps people learn, communicate, or function better. AT can be as high-tech as a computer and can require training to use. Training is usually provided one on one or in a group by a training professional. 
+   
+---

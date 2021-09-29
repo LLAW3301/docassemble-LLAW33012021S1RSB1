@@ -1,0 +1,69 @@
+---
+# ------------------------------------------------------
+#                     Searching
+# ------------------------------------------------------
+---
+# Shows a top banner section that has a search input field, where the user can type in the term they want to search.
+# The JavaScript automatically populates the search dropdown with all available services based on their current input
+mandatory: True
+event: open_search
+prevent going back: True
+question: |
+  What support is available?
+pre: |
+      <div class="banner">
+        <div class="search-center">
+          <h1>How can we help you?</h1>
+          <input type="text" placeholder="Search.." id="search-bar" onkeyup="searchFilter()" autocomplete="off">
+
+          <div id="search-content">
+            %for service in NDIS_services:
+            <a tabindex="1" onclick="action_perform('open_service', {service: '${ service['service'] }'})">${ service['service'] }</a>
+            %endfor
+          </div>
+        </div>
+      </div>
+subquestion: |
+  The [National Disability Insurance Scheme](https://www.ndis.gov.au) (NDIS) has multiple funding options available for participants on the Scheme. Funding varies across the three major support categories, these include; Core Support, Capital Support and Capacity Building Support. Further information is available below:
+  
+  <br>
+  %for support in NDIS_supports:
+  <div class="card support_card">
+    <div class="card-body">
+      <h5 class="card-title">${ support['support'] }</h5>
+      <p>${ support['bio'] }</p>
+      <a class="card-btn" tabindex="10" href='#${ support['support'] }' onclick="action_perform('open_support', {support: '${ support['support'] }'})">Read More</a>
+    </div>
+  </div>
+  %endfor  
+script: |
+  <script>
+    /* Search Bar from https://www.w3schools.com/howto/howto_js_filter_dropdown.asp */
+    
+    var input = document.getElementById("search-bar");
+    
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+          event.preventDefault();
+          action_perform('search_service', {term: input.value.toUpperCase()});  
+      }
+    });
+    
+    function searchFilter() {
+      var filter, a, i;
+
+      filter = input.value.toUpperCase();
+      div = document.getElementById("search-content");
+      a = div.getElementsByTagName("a");
+      
+      for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1 && filter.length > 0) {
+          a[i].style.display = "block";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+---

@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.LLAW33012021S1RSB1',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='Changes',
+      long_description='# NDIS Guidance Application for Royal Society for the Blind\r\n\r\n### Docassemble\r\n\r\nThis Docassemble package contains the source code and other resources used \r\nwithin the NDIS Guidance Service tool created for RSB.\r\n\r\n### Overview\r\n\r\nWe have been consulted by Sarah (‘the client’), an Adaptive Technology Specialist Trainer at the Royal Society for the Blind (‘RSB’) to provide an application that will assist NDIS clients in understanding their plan, knowing what funds they have and how best to spend these funds.\r\n\r\nThis application was created in collaboration with students from LLAW3301: Law in a Digital Age and COMP3751: Interactive Computer Systems.\r\n\r\n### Authors\r\n- Abigail Groocock\r\n- Jeremy Webster\r\n- Josephine Khoury \r\n- Kolby Gibbs \r\n- Nick Pepaj',
       long_description_content_type='text/markdown',
       author='Mark Ferraretto',
       author_email='mark.ferraretto@flinders.edu.au',

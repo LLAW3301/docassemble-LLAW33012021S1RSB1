@@ -1,0 +1,30 @@
+---
+# ------------------------------------------------------
+#               JavaScript to Docassemble
+# ------------------------------------------------------
+---
+# Called when they press a Support button
+event: open_support
+code: |
+  support_opened = action_argument('support')
+
+  endpoint['open_support']
+---
+# Called when they click a Search option from the dropdown
+event: open_service
+code: |
+  service_opened = action_argument('service')
+  
+  for service in NDIS_services:
+    if service_opened == service['service']:
+      found_service = service.copy_deep('new_object')
+  
+  endpoint['open_service']
+---
+# Called when they press Enter on the search field
+event: search_service
+code: |
+  service_searched = action_argument('term')
+
+  endpoint['error']
+---
